@@ -1,0 +1,53 @@
+.main-nav {
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: black;
+  opacity: 1;
+  color: white;
+  height: 40px;
+  width: 100%;
+  font-family: $sans-serif;
+  -webkit-font-smoothing: initial;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  padding-left: 30px;
+}
+
+.logo {
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-name {
+  padding-bottom: 5px;
+  margin-left: 5px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.login-signup {
+  display: flex;
+  height: 100%;
+}
+
+.login-signup > ul {
+  list-style: none;
+  align-items: center;
+  padding-top: 6px;
+  padding-right: 30px;
+}
