@@ -39,7 +39,6 @@
   font-family: "Archivo Black", sans-serif;
 }
 
-
 .login-signup > ul {
   list-style: none;
   display: flex;
@@ -79,18 +78,16 @@
   align-items: center;
 }
 
-
 .login-button,
 .signup-button {
   border-radius: 5px;
   border: 1px solid white;
   background-color: white;
   margin: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
   padding: 5px 8px;
   color: black;
 }
-
 
 .signup-button {
   margin-left: 8px;
