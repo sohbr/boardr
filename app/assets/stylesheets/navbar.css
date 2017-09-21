@@ -51,3 +51,23 @@
   padding-top: 6px;
   padding-right: 30px;
 }
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-input {
+  margin-left: 20px;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.login-form-box {
+  outline: 5px solid black;
+  padding: 50px;
+}
