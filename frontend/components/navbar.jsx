@@ -1,16 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const sessionLinks = () => (
-  <nav className="login-signup">
-    <ul className="login-link">
-      <Link to="/login">Log In</Link>
-    </ul>
-    <ul className="signup-link">
-      <Link to="/signup">Sign Up</Link>
-    </ul>
-  </nav>
-);
+import SessionLinks from "./session_links";
 
 const loggedInLinks = (currentUser, logout) => (
   <div>
@@ -23,7 +13,7 @@ const loggedInLinks = (currentUser, logout) => (
 
 const rightBar = (currentUser, logout) => (
   <div className="right-nav">
-    {currentUser ? loggedInLinks(currentUser, logout) : sessionLinks()}
+    {currentUser ? loggedInLinks(currentUser, logout) : <SessionLinks />}
   </div>
 );
 

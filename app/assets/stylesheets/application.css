@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+html,
+body,
+main,
+main > div {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: helvetica, sans-serif;
+}
+
+body {
+  background-image: url(https://unsplash.com/search/photos/snowboard?photo=uK7qs8UHOo4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="text"],
+input[type="password"] {
+  border: 1px solid black;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+}
+
+input[type="submit"] {
+  width: 70px;
+  align-self: center;
+}
+
+input {
+  text-align: center;
+}

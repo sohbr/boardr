@@ -2,13 +2,14 @@ import React from "react";
 
 import { Link, withRouter } from "react-router-dom";
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      email: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -16,7 +17,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let user = this.state;
-    this.props.processForm({ user });
+    this.props.signup({ user });
   }
 
   componentWillReceiveProps(newProps) {
@@ -26,11 +27,7 @@ class SessionForm extends React.Component {
   }
 
   navLink() {
-    if (this.props.formType === "login") {
-      return <Link to="/signup">Need to create an account?</Link>;
-    } else {
-      return <Link to="/login">Already have an account?</Link>;
-    }
+    return <Link to="/login">Already have an account?</Link>;
   }
 
   update(field) {
@@ -67,6 +64,17 @@ class SessionForm extends React.Component {
             <br />
 
             <label>
+              email
+              <input
+                className="login-input"
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+              />
+            </label>
+            <br />
+
+            <label>
               password
               <input
                 className="login-input"
@@ -76,7 +84,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input type="submit" value={this.props.formType} />
+            <button type="submit" value={"sign up!"} />
           </div>
 
           {this.navLink()}
@@ -87,6 +95,6 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(SignupForm);
 
 //

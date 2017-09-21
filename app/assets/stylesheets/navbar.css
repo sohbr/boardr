@@ -1,5 +1,4 @@
 .main-nav {
-  position: fixed;
   z-index: 5;
   display: flex;
   justify-content: space-between;
@@ -40,13 +39,10 @@
   font-family: "Archivo Black", sans-serif;
 }
 
-.login-signup {
-  display: flex;
-  height: 100%;
-}
 
 .login-signup > ul {
   list-style: none;
+  display: flex;
   align-items: center;
   padding-top: 6px;
   padding-right: 30px;
@@ -59,15 +55,44 @@
 }
 
 .login-input {
-  margin-left: 20px;
+  width: 100%;
 }
 
-.login-form-container {
+.login-signup {
   display: flex;
-  justify-content: center;
-  margin-top: 100px;
+  height: 22px;
+}
+.login-form-container {
+  text-align: center;
 }
 .login-form-box {
+  margin-top: 10px;
   outline: 5px solid black;
   padding: 50px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.right-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.login-button,
+.signup-button {
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: white;
+  margin: 0;
+  box-sizing: border-box
+  padding: 5px 8px;
+  color: black;
+}
+
+
+.signup-button {
+  margin-left: 8px;
+  margin-right: 30px;
 }

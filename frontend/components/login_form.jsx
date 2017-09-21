@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link, withRouter } from "react-router-dom";
 
-class SessionForm extends React.Component {
+class LoginForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let user = this.state;
-    this.props.processForm({ user });
+    this.props.login({ user });
   }
 
   componentWillReceiveProps(newProps) {
@@ -26,11 +26,7 @@ class SessionForm extends React.Component {
   }
 
   navLink() {
-    if (this.props.formType === "login") {
-      return <Link to="/signup">Need to create an account?</Link>;
-    } else {
-      return <Link to="/login">Already have an account?</Link>;
-    }
+    return <Link to="/signup">Need to create an account?</Link>;
   }
 
   update(field) {
@@ -76,7 +72,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input type="submit" value={this.props.formType} />
+            <button type="submit" value={"login!"} />
           </div>
 
           {this.navLink()}
@@ -87,6 +83,6 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(LoginForm);
 
 //

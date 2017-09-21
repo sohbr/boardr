@@ -9,9 +9,6 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
-    <Route path="/login" component={SessionFormContainer} />
-    <Route path="/signup" component={SessionFormContainer} />
-    <UploadForm />
   </div>
 );
 
