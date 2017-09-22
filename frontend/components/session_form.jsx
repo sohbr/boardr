@@ -1,7 +1,16 @@
 import React from "react";
 import Modal from "react-modal";
 
-import { Link, withRouter } from "react-router-dom";
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "50%",
+    bottom: "50%",
+    marginRight: "50%",
+    transform: "translate(50%, 50%)"
+  }
+};
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -20,10 +29,12 @@ class SessionForm extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.changeForm = this.changeForm.bind(this);
     this.navLink = this.navLink.bind(this);
+    this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger;
     if (this.formType === "sign up") {
       //
       this.props.signup(this.state);
@@ -52,13 +63,12 @@ class SessionForm extends React.Component {
   }
 
   changeForm() {
-    this.props.clearErrors();
-
     if (this.formType === "log in") {
       this.formType = "sign up";
     } else {
       this.formType = "log in";
     }
+    this.props.clearErrors();
   }
 
   navLink() {
@@ -112,11 +122,9 @@ class SessionForm extends React.Component {
 
         <Modal
           isOpen={this.state.modalIsOpen}
-          contentLabel="Modal"
+          contentLabel="Signup-Login-Modal"
           onRequestClose={this.closeModal}
-          className={{
-            base: "session-form-modal"
-          }}
+          className="session-form-modal"
           overlayClassName={{
             base: "session-form-overlay"
           }}
@@ -151,8 +159,9 @@ class SessionForm extends React.Component {
                 <br />
                 <input type="submit" value={this.formType} />
               </div>
-
+              <br />
               {this.navLink()}
+              <br />
               {this.renderErrors()}
             </form>
           </div>
