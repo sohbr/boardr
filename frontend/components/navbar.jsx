@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SessionLinksContainer from "./session_links_container";
+import SessionFormContainer from "./session_form_container";
 
 const loggedInLinks = (currentUser, logout) => (
   <div>
@@ -16,7 +16,7 @@ const rightBar = (currentUser, logout) => (
     {currentUser ? (
       loggedInLinks(currentUser, logout)
     ) : (
-      <SessionLinksContainer />
+      <SessionFormContainer />
     )}
   </div>
 );

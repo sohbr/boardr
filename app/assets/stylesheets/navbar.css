@@ -47,7 +47,7 @@
   padding-right: 30px;
 }
 
-.login-form {
+.session-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -61,7 +61,7 @@
   display: flex;
   height: 22px;
 }
-.login-form-container {
+.form-container {
   text-align: center;
 }
 .login-form-box {
