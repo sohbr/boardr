@@ -27,11 +27,11 @@ main > div {
 
 body {
   background: url(https://i.imgur.com/V2z2KZl.jpg);
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
-  height: auto;
-  width: auto;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  position: inherit;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
