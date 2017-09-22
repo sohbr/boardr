@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170921201448) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email", null: false
+    t.string "email"
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
