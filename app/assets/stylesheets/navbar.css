@@ -61,14 +61,15 @@
   display: flex;
   height: 22px;
 }
+
 .form-container {
   text-align: center;
 }
+
 .login-form-box {
   margin-top: 10px;
-  outline: 5px solid black;
   padding: 50px;
-  width: 400px;
+  width: 275px;
   margin: 0 auto;
 }
 
@@ -80,6 +81,7 @@
 
 .login-button,
 .signup-button {
+  width: 56px;
   border-radius: 5px;
   border: 1px solid white;
   background-color: white;
@@ -95,20 +97,23 @@
   margin-right: 110px;
 }
 
-/*.session-form-modal {
-  width: 300px;
-  height: 200px;
-  line-height: 200px;
+.session-form-modal {
+  /*width: 100px;*/
+  /*height: 100px;*/
+  line-height: 20px;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -100px;
-  margin-left: -150px;
-  background-color: #f1c40f;
-  border-radius: 5px;
-  text-align: center;
+  transform: translate(-50%, -50%);
+  /*margin-top: -200px;*/
+  /*margin-left: -300px;*/
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 8px;
+  border: 1px solid black;
+  /*text-align: center;*/
   z-index: 11;
-}*/
+}
 
 .overlay {
   position: absolute;
@@ -118,4 +123,8 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
+}
+
+.username-password {
+  font-size: 12px;
 }

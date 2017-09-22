@@ -1,17 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "50%",
-    bottom: "50%",
-    marginRight: "50%",
-    transform: "translate(50%, 50%)"
-  }
-};
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +23,6 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
     if (this.formType === "sign up") {
       //
       this.props.signup(this.state);
@@ -75,11 +63,11 @@ class SessionForm extends React.Component {
     if (this.formType === "log in") {
       //
       return (
-        <button onClick={this.changeForm}>Need to create an account?</button>
+        <button onClick={this.changeForm}>need to create an account?</button>
       );
     } else {
       return (
-        <button onClick={this.changeForm}>Already have an account?</button>
+        <button onClick={this.changeForm}>already have an account?</button>
       );
     }
   }
@@ -109,14 +97,14 @@ class SessionForm extends React.Component {
             className="login-button"
             onClick={() => this.openModal("log in")}
           >
-            Log In
+            log in
           </button>
 
           <button
             className="signup-button"
             onClick={() => this.openModal("sign up")}
           >
-            Sign Up
+            sign up
           </button>
         </nav>
 
@@ -138,7 +126,7 @@ class SessionForm extends React.Component {
           <div className="form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <div className="session-form">
-                <label>
+                <label className="username-password">
                   username
                   <input
                     className="login-input"
@@ -149,7 +137,7 @@ class SessionForm extends React.Component {
                 </label>
                 <br />
 
-                <label>
+                <label className="username-password">
                   password
                   <input
                     className="login-input"
@@ -158,6 +146,7 @@ class SessionForm extends React.Component {
                     onChange={this.update("password")}
                   />
                 </label>
+                <br />
                 <br />
                 <input type="submit" value={this.formType} />
               </div>
