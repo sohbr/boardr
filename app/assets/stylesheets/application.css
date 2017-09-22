@@ -26,7 +26,17 @@ main > div {
 }
 
 body {
-  background-image: url(https://unsplash.com/search/photos/snowboard?photo=uK7qs8UHOo4);
+  background: url(https://i.imgur.com/V2z2KZl.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 }
 
 * {

@@ -72,7 +72,7 @@ class LoginForm extends React.Component {
               />
             </label>
             <br />
-            <button type="submit" value={"login!"} />
+            <button type="submit">Log In</button>
           </div>
 
           {this.navLink()}
@@ -83,6 +83,6 @@ class LoginForm extends React.Component {
   }
 }
 
-export default withRouter(LoginForm);
+export default LoginForm;
 
 //

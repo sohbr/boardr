@@ -4,6 +4,8 @@ import Modal from "react-modal";
 import SignupFormContainer from "./signup_form_container";
 import LoginFormContainer from "./login_form_container";
 import { Route, Link } from "react-router-dom";
+import { connect } from "react-redux";
+import FormContainer from "./form_container";
 
 const customStyles = {
   content: {
@@ -21,23 +23,46 @@ class SessionLinks extends React.Component {
     super(props);
 
     this.state = {
-      modalIsOpen: false
+      signupIsOpen: false,
+      loginIsOpen: false
     };
 
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.closeLoginModal = this.closeLoginModal.bind(this);
+    this.closeSignupModal = this.closeSignupModal.bind(this);
+    this.openLoginModal = this.openLoginModal.bind(this);
+    this.openSignupModal = this.openSignupModal.bind(this);
+  }
+
+  openLoginModal() {
+    this.props.history.push("/login");
+    this.setState({
+      signupIsOpen: true
+    });
+  }
+
+  openSignupModal() {
+    this.props.history.push("/signup");
+    this.setState({
+      loginIsOpen: true
+    });
+  }
+
+  closeLoginModal() {
+    this.setState({
+      modalIsOpen: false
+    });
+  }
+
+  closeSignupModal() {
+    this.setState({
+      modalIsOpen: false
+    });
   }
 
   openModal() {
     this.setState({
       modalIsOpen: true
     });
-  }
-
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.subtitle.style.color = "#f00";
   }
 
   closeModal() {
@@ -50,23 +75,21 @@ class SessionLinks extends React.Component {
     return (
       <div>
         <nav className="login-signup">
-          <button className="login-button" onClick={this.openModal}>
-            <Link to="/login">Log In</Link>
+          <button className="login-button" onClick={this.openLoginModal}>
+            Log In
           </button>
 
-          <button className="signup-button" onClick={this.openModal}>
-            <Link to="/signup">Sign Up</Link>
+          <button className="signup-button" onClick={this.openSignupModal}>
+            Sign Up
           </button>
         </nav>
         <Modal
           isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           style={customStyles}
-          contentLabel="Example Modal"
+          contentLabel="Signup-Login-Modal"
         >
-          <Route path="/login" component={LoginFormContainer} />
-          <Route path="/signup" component={SignupFormContainer} />
+          <FormContainer />
         </Modal>
       </div>
     );

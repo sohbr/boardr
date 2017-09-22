@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SessionLinks from "./session_links";
+import SessionLinksContainer from "./session_links_container";
 
 const loggedInLinks = (currentUser, logout) => (
   <div>
@@ -13,7 +13,11 @@ const loggedInLinks = (currentUser, logout) => (
 
 const rightBar = (currentUser, logout) => (
   <div className="right-nav">
-    {currentUser ? loggedInLinks(currentUser, logout) : <SessionLinks />}
+    {currentUser ? (
+      loggedInLinks(currentUser, logout)
+    ) : (
+      <SessionLinksContainer />
+    )}
   </div>
 );
 
