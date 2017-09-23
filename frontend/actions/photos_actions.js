@@ -1,4 +1,4 @@
-import PhotosAPIUtil from "../util/session_api_util";
+import * as PhotosAPIUtil from "../util/photos_api_util";
 
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const RECEIVE_PHOTOS = "RECEIVE_PHOTOS";
@@ -12,7 +12,7 @@ export const receivePhoto = photo => ({
 });
 
 export const receivePhotos = photos => ({
-  type: RECEIVE_PHOTO,
+  type: RECEIVE_PHOTOS,
   photos
 });
 
@@ -30,14 +30,15 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const postPhoto = photo => dispatch =>
-  PhotosAPIUtil.postPhoto(photo).then(
+export const postPhoto = photo => dispatch => {
+  return PhotosAPIUtil.postPhoto(photo).then(
     returnedPhoto => {
       dispatch(receivePhoto(returnedPhoto));
       dispatch(clearErrors());
     },
     err => dispatch(receiveErrors(err.responseJSON))
   );
+};
 
 export const patchPhoto = photo => dispatch =>
   PhotosAPIUtil.patchPhoto(photo).then(
@@ -66,10 +67,10 @@ export const getPhotos = ownerId => dispatch =>
     err => dispatch(receiveErrors(err.responseJSON))
   );
 
-export const deletePhotos = photoId => dispatch =>
+export const deletePhoto = photoId => dispatch =>
   PhotosAPIUtil.deletePhoto(photoId).then(
-    photos => {
-      dispatch(removePhoto(photos));
+    photo => {
+      dispatch(removePhoto(photo));
       dispatch(clearErrors());
     },
     err => dispatch(receiveErrors(err.responseJSON))

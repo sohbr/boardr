@@ -12,12 +12,13 @@ const PhotosReducer = (oldState = {}, action) => {
   switch (action.type) {
     case RECEIVE_PHOTO:
       newState[action.photo.id] = action.photo;
+      return newState;
 
     case RECEIVE_PHOTOS:
       return action.photos;
 
     case REMOVE_PHOTO:
-      delete newState[action.photo.id];
+      delete newState[action.photoId];
       return newState;
 
     default:

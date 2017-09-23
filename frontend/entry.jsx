@@ -4,7 +4,7 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 
 import * as sessionActions from "./actions/session_actions";
-import * as photosActions from "./actions/photos_actions";
+import * as PhotosActions from "./actions/photos_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -28,8 +28,8 @@ window.signup = sessionActions.signup;
 window.logout = sessionActions.logout;
 window.login = sessionActions.login;
 
-window.postPhoto = photosActions.postPhoto;
-window.getPhotos = photosActions.getPhotos;
-window.getPhoto = photosActions.getPhoto;
-window.patchPhoto = photosActions.patchPhoto;
-window.deletePhoto = photosActions.deletePhoto;
+window.postPhoto = PhotosActions.postPhoto;
+window.getPhotos = PhotosActions.getPhotos;
+window.getPhoto = PhotosActions.getPhoto;
+window.patchPhoto = PhotosActions.patchPhoto;
+window.deletePhoto = PhotosActions.deletePhoto;
