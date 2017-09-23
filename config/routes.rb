@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
     resource :sessions, only: [:create, :destroy, :show]
 
-    resources :photos, only: [:update, :show, :delete]
+    resources :photos, only: [:update, :show, :destroy]
 
   end
 

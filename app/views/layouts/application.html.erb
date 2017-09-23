@@ -7,6 +7,16 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+
+    <script type="text/javascript">
+      <% if logged_in? %>
+        window.currentUser = <%= render(
+          "api/users/user.json.jbuilder",
+          user: current_user
+        ).html_safe %>
+      <% end %>
+    </script>
+
   </head>
 
   <body>

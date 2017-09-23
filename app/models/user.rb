@@ -20,6 +20,11 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :photos,
+    primary_key: :id,
+    foreign_key: :owner_id,
+    class_name: :Photo
+
   attr_reader :password
 
   def reset_session_token!
