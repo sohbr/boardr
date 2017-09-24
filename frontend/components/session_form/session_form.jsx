@@ -62,13 +62,21 @@ class SessionForm extends React.Component {
   navLink() {
     if (this.formType === "log in") {
       return (
-        <button type="button" onClick={this.changeForm}>
+        <button
+          className="form-swap-button"
+          type="button"
+          onClick={this.changeForm}
+        >
           need to create an account?
         </button>
       );
     } else {
       return (
-        <button type="button" onClick={this.changeForm}>
+        <button
+          className="form-swap-button"
+          type="button"
+          onClick={this.changeForm}
+        >
           already have an account?
         </button>
       );
@@ -118,10 +126,6 @@ class SessionForm extends React.Component {
           className={"session-form-modal"}
           overlayClassName={"overlay"}
         >
-          <button onClick={this.closeModal}>
-            <i className="fa fa-times" aria-hidden="true" />
-          </button>
-
           <div className="form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <div className="session-form">
@@ -149,7 +153,13 @@ class SessionForm extends React.Component {
                 </label>
                 <br />
                 <br />
-                <input type="submit" value={this.formType} />
+                <button
+                  className="submit-modal"
+                  type="submit"
+                  value={this.formType}
+                >
+                  {this.formType}
+                </button>
               </div>
               <br />
               {this.navLink()}

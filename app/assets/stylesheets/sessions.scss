@@ -1,3 +1,90 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.session-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-input {
+  border-right: 50px;
+}
+
+.login-signup {
+  display: flex;
+  height: 18px;
+  margin-top: 3px;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.login-form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 50px;
+  width: 170px;
+  margin: 0 auto;
+}
+
+.session-form-modal {
+  /*width: 100px;*/
+  /*height: 100px;*/
+  line-height: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*margin-top: -200px;*/
+  /*margin-left: -300px;*/
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 8px;
+  border: 1px solid black;
+  /*text-align: center;*/
+  z-index: 11;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.username-password {
+  font-size: 12px;
+}
+
+.submit-modal {
+  display: flex;
+  justify-content: center;
+
+  width: 62px;
+  height: 21px;
+  font-size: 11px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+
+  padding: 2px 8px;
+
+  color: white;
+  align-self: center;
+}
+
+.submit-modal:hover {
+  background-color: white;
+  color: black;
+}
+
+.form-swap-button {
+}
