@@ -8,7 +8,6 @@ class SessionForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      ///
       modalIsOpen: false
     };
     this.formType = "";
@@ -24,26 +23,27 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.formType === "sign up") {
-      //
-      this.props.signup(this.state);
+      this.props.signup(this.state).then(id => {
+        this.props.history.push(`/users/${id}`);
+      });
     } else {
-      this.props.login(this.state);
+      this.props.login(this.state).then(id => {
+        this.props.history.push(`/users/${id}`);
+      });
     }
   }
 
   openModal(formType) {
-    this.formType = formType; //
+    this.formType = formType;
     this.setState({
       modalIsOpen: true
-      ///
     });
   }
 
   closeModal() {
-    this.formType = ""; //
+    this.formType = "";
     this.setState({
       modalIsOpen: false,
-      ///
       username: "",
       password: ""
     });
@@ -61,13 +61,16 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.formType === "log in") {
-      //
       return (
-        <button onClick={this.changeForm}>need to create an account?</button>
+        <button type="button" onClick={this.changeForm}>
+          need to create an account?
+        </button>
       );
     } else {
       return (
-        <button onClick={this.changeForm}>already have an account?</button>
+        <button type="button" onClick={this.changeForm}>
+          already have an account?
+        </button>
       );
     }
   }
@@ -119,7 +122,7 @@ class SessionForm extends React.Component {
             base: "overlay"
           }}
         >
-          <button onClick={() => this.closeModal()}>
+          <button onClick={this.closeModal}>
             <i className="fa fa-times" aria-hidden="true" />
           </button>
 
@@ -129,6 +132,7 @@ class SessionForm extends React.Component {
                 <label className="username-password">
                   username
                   <input
+                    name="username"
                     className="login-input"
                     type="text"
                     value={this.state.username}
@@ -140,6 +144,7 @@ class SessionForm extends React.Component {
                 <label className="username-password">
                   password
                   <input
+                    name="password"
                     className="login-input"
                     type="password"
                     value={this.state.password}

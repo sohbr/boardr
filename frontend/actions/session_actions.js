@@ -23,6 +23,7 @@ export const signup = user => dispatch =>
     user2 => {
       dispatch(receiveCurrentUser(user2));
       dispatch(clearErrors());
+      return user2.id;
     },
     err => dispatch(receiveErrors(err.responseJSON))
   );
@@ -32,8 +33,11 @@ export const login = user => dispatch =>
     user2 => {
       dispatch(receiveCurrentUser(user2));
       dispatch(clearErrors());
+      return user2.id;
     },
-    err => dispatch(receiveErrors(err.responseJSON))
+    err => {
+      dispatch(receiveErrors(err.responseJSON));
+    }
   );
 
 export const logout = () => dispatch =>
