@@ -19,7 +19,7 @@ class PhotoIndex extends React.Component {
     }
 
     return (
-      <div className="user-index">
+      <div className="photo-index">
         <ul>
           {this.props.photos.map(photo => (
             <PhotoIndexItem key={`photo-${photo.id}`} photo={photo} />

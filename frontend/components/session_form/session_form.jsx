@@ -115,12 +115,8 @@ class SessionForm extends React.Component {
           isOpen={this.state.modalIsOpen}
           contentLabel="Signup-Login-Modal"
           onRequestClose={this.closeModal}
-          className={{
-            base: "session-form-modal"
-          }}
-          overlayClassName={{
-            base: "overlay"
-          }}
+          className={"session-form-modal"}
+          overlayClassName={"overlay"}
         >
           <button onClick={this.closeModal}>
             <i className="fa fa-times" aria-hidden="true" />

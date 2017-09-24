@@ -12,7 +12,7 @@ const App = () => (
       <NavBarContainer />
     </header>
     <section>
-      <Route path="/users/:userId" component={PhotoIndexContainer} />
+      <ProtectedRoute path="/users/:userId" component={PhotoIndexContainer} />
     </section>
   </div>
 );

@@ -31,6 +31,7 @@
 .logo-icon {
   width: 30px;
   height: 30px;
+  margin-bottom: 5px;
 }
 
 .logo-name {
@@ -59,7 +60,8 @@
 
 .login-signup {
   display: flex;
-  height: 22px;
+  height: 18px;
+  margin-top: 3px;
 }
 
 .form-container {
@@ -81,15 +83,25 @@
 
 .login-button,
 .signup-button {
+  display: flex;
+  justify-content: center;
+  height: 100%;
   width: 56px;
+  font-size: 11px;
   border-radius: 5px;
   border: 1px solid white;
   background-color: white;
-  margin: 0;
+  margin: 0 0 2px 0;
   box-sizing: border-box;
   padding: 2px 8px;
   color: black;
   align-self: center;
+}
+
+.login-button:hover,
+.signup-button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
 }
 
 .signup-button {
@@ -121,7 +133,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
 
