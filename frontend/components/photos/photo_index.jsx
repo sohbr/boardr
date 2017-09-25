@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Route, withRouter } from "react-router-dom";
+import { Link, Route, withRouter } from "react-router-dom";
 import PhotoIndexItem from "./photo_index_item";
 
 class PhotoIndex extends React.Component {
@@ -22,7 +22,9 @@ class PhotoIndex extends React.Component {
       <div className="photo-index">
         <ul>
           {this.props.photos.map(photo => (
-            <PhotoIndexItem key={`photo-${photo.id}`} photo={photo} />
+            <Link to={`/photos/${photo.id}`}>
+              <PhotoIndexItem key={`photo-${photo.id}`} photo={photo} />
+            </Link>
           ))}
         </ul>
       </div>
