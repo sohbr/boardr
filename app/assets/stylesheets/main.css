@@ -4,7 +4,6 @@
   align-items: flex-end;
 }
 
-
 .background-img {
   display: flex;
   flex-direction: column;
@@ -13,7 +12,6 @@
   background: url(http://res.cloudinary.com/sohnbrian/image/upload/v1506102062/joshua-reddekopp-217223_k5l13j.jpg);
   background-position: cover;
   background-repeat: no-repeat;
-  background margin-bottom; 40px;
   height: 100%;
   width: 100%;
   position: center center;
