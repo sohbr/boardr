@@ -7,11 +7,11 @@ class PhotoShow extends React.Component {
     super(props);
 
     this.state = {
-      title: this.props.title,
-      description: this.props.description,
-      ownername: this.props.ownername,
-      img_url: this.props.img_url,
-      id: this.props.id,
+      title: this.props.photo.title,
+      description: this.props.photo.description,
+      ownername: this.props.photo.ownername,
+      img_url: this.props.photo.img_url,
+      id: this.props.photo.id,
       editModalOpen: false,
       deleteModalOpen: false
     };
@@ -21,6 +21,15 @@ class PhotoShow extends React.Component {
     this.closeEditModal = this.closeEditModal.bind(this);
     this.closeDeleteModal = this.closeDeleteModal.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  update(field) {
+    return e => {
+      e.preventDefault();
+      this.setState({ [field]: e.target.value });
+    };
   }
 
   openEditModal() {
@@ -53,6 +62,13 @@ class PhotoShow extends React.Component {
     this.props.deletePhoto(this.props.photo.id).then(username => {
       this.props.history.push(`/users/${username}`);
     });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    this.props.patchPhoto(this.state);
+    this.closeEditModal();
   }
 
   componentWillMount() {
@@ -119,6 +135,47 @@ class PhotoShow extends React.Component {
             >
               NO
             </button>
+          </div>
+        </Modal>
+        <Modal
+          isOpen={this.state.editModalOpen}
+          contentLabel="edit-modal"
+          onRequestClose={this.closeEditModal}
+          className={"edit-modal"}
+          overlayClassName={"edit-modal-overlay"}
+        >
+          <div className="edit-title-description-modal">
+            <form onSubmit={this.handleSubmit} className="edit-form">
+              <div className="edit-form-2">
+                <label className="edit-title-description-label">
+                  title
+                  <input
+                    name="title"
+                    className="edit-title-description-input"
+                    type="text"
+                    value={this.state.title}
+                    onChange={this.update("title")}
+                  />
+                </label>
+                <br />
+
+                <label className="edit-title-description-label">
+                  description
+                  <input
+                    name="description"
+                    className="edit-title-description-input"
+                    type="text"
+                    value={this.state.description}
+                    onChange={this.update("description")}
+                  />
+                </label>
+                <br />
+                <br />
+                <button className="submit-edit" type="submit">
+                  EDIT
+                </button>
+              </div>
+            </form>
           </div>
         </Modal>
       </div>

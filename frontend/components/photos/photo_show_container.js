@@ -1,5 +1,9 @@
 import { connect } from "react-redux";
-import { getPhoto, deletePhoto } from "../../actions/photos_actions";
+import {
+  getPhoto,
+  deletePhoto,
+  patchPhoto
+} from "../../actions/photos_actions";
 import PhotoShow from "./photo_show";
 import { clearErrors } from "../../actions/session_actions";
 
@@ -12,6 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   getPhoto: id => dispatch(getPhoto(id)),
+  patchPhoto: photo => dispatch(patchPhoto(photo)),
   deletePhoto: id => dispatch(deletePhoto(id)),
   clearErrors: () => dispatch(clearErrors())
 });
