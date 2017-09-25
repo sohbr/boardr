@@ -19,9 +19,11 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.6.0",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "babel-polyfill": "^6.26.0"
   },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description":
+    "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -48,7 +50,6 @@
   },
   "homepage": "https://github.com/sohbr/boardr#readme",
   "devDependencies": {
-    "babel-polyfill": "^6.26.0",
     "file-loader": "^0.11.2"
   }
 }
