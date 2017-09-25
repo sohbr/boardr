@@ -40,11 +40,10 @@
 
 .show-bottom-left-photo-details {
   display: flex;
-  flex-direction: row:
+  flex-direction: row;
   overflow: auto;
   margin-right: 4px;
 }
-
 
 .show-bottom-left-user-img {
   width: 40%;
@@ -63,22 +62,18 @@
   font-weight: bold;
   font-size: 14px;
   padding: 4px 2px;
-
 }
 
 .--title {
   font-style: italic;
   font-size: 14px;
   padding: 4px 2px;
-
 }
 
 .--description {
   font-size: 12px;
   padding: 4px 2px;
-
 }
-
 
 .show-bottom-right {
   margin-left: 10px;
