@@ -56,6 +56,7 @@
   align-items: center;
 }
 
+.demo-button,
 .login-button,
 .signup-button {
   display: flex;
@@ -73,13 +74,46 @@
   align-self: center;
 }
 
+.demo-button:hover,
 .login-button:hover,
 .signup-button:hover {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
 }
 
+.login-button {
+  margin-left: 8px;
+}
+
 .signup-button {
   margin-left: 8px;
   margin-right: 110px;
+}
+
+.logged-in-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.header-logout-button {
+  margin-left: 15px;
+  border: 1px solid white;
+  color: white;
+}
+
+.header-upload-button {
+  margin-left: 15px;
+  border: 1px solid white;
+  color: white;
+}
+
+.fa.fa-power-off {
+  font-size: 22px;
+}
+
+.fa-cloud-upload {
+  font-size: 22px;
 }

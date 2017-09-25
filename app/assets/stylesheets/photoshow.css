@@ -30,6 +30,7 @@
 }
 
 .show-bottom-left {
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -37,10 +38,50 @@
   background-color: red;
 }
 
-.show-page-photo-details {
+.show-bottom-left-photo-details {
+  display: flex;
+  flex-direction: row:
+  overflow: auto;
+  margin-right: 4px;
 }
 
+
+.show-bottom-left-user-img {
+  width: 40%;
+  justify-content: flex-end;
+  min-height: 100px;
+}
+
+.show-bottom-left-user-title-description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.--username {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 4px 2px;
+
+}
+
+.--title {
+  font-style: italic;
+  font-size: 14px;
+  padding: 4px 2px;
+
+}
+
+.--description {
+  font-size: 12px;
+  padding: 4px 2px;
+
+}
+
+
 .show-bottom-right {
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   width: 50%;

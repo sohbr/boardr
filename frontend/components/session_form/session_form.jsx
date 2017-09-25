@@ -18,6 +18,7 @@ class SessionForm extends React.Component {
     this.changeForm = this.changeForm.bind(this);
     this.navLink = this.navLink.bind(this);
     this.update = this.update.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleSubmit(e) {
@@ -31,6 +32,17 @@ class SessionForm extends React.Component {
         this.props.history.push(`/users/${username}`);
       });
     }
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    this.setState({
+      username: "noob-Boardr",
+      password: "password"
+    });
+    this.props.login(this.state).then(username => {
+      this.props.history.push(`/users/${username}`);
+    });
   }
 
   openModal(formType) {
@@ -104,6 +116,10 @@ class SessionForm extends React.Component {
     return (
       <div>
         <nav className="login-signup">
+          <button className="demo-button" onClick={this.demoLogin}>
+            demo
+          </button>
+
           <button
             className="login-button"
             onClick={() => this.openModal("log in")}

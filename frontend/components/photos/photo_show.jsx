@@ -26,7 +26,21 @@ class PhotoShow extends React.Component {
           </div>
         </div>
         <div className="show-bottom-half">
-          <div className="show-bottom-left" />
+          <div className="show-bottom-left">
+            <div className="show-bottom-left-photo-details">
+              <div className="show-bottom-left-user-img">
+                <div>user profile image</div>
+              </div>
+              <div className="show-bottom-left-user-title-description">
+                <div className="--username">{this.props.photo.ownername}</div>
+                <div className="--title">{this.props.photo.title}</div>
+                <div className="--description">
+                  {this.props.photo.description}
+                </div>
+              </div>
+            </div>
+            <div className="COMMENTS WILL GO HERE">comments</div>
+          </div>
           <div className="show-bottom-right" />
         </div>
       </div>

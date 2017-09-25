@@ -3,10 +3,19 @@ import { Link } from "react-router-dom";
 import SessionFormContainer from "../session_form/session_form_container";
 
 const loggedInLinks = (currentUser, logout) => (
-  <div>
+  <div className="logged-in-links">
     <h2 className="header-name">Welcome, {currentUser.username}.</h2>
+    <Link
+      className="header-upload-button"
+      to={`/users/${currentUser.username}/upload`}
+    >
+      upload link
+      <i class="fa-cloud-upload" aria-hidden="true" />
+    </Link>
+
     <button className="header-logout-button" onClick={logout}>
       Log Out
+      <i class="fa fa-power-off" aria-hidden="true" />
     </button>
   </div>
 );
