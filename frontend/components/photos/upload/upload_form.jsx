@@ -38,6 +38,7 @@ class UploadForm extends React.Component {
         this.setState({
           uploadedFileCloudinaryUrl: response.body.secure_url
         });
+        this.props.setUrl(response.body.secure_url);
       }
     });
   }
@@ -45,23 +46,25 @@ class UploadForm extends React.Component {
   render() {
     return (
       <div>
-        <div className="FileUpload">
-          <Dropzone
-            multiple={false}
-            accept="image/*"
-            onDrop={this.onImageDrop.bind(this)}
-          >
-            <p>Drop an image or click to select a file to upload.</p>
-          </Dropzone>;
-        </div>
-        <div>
-          {this.state.uploadedFileCloudinaryUrl === "" ? null : (
-            <div>
-              <p>{this.state.uploadedFile.name}</p>
-              <img src={this.state.uploadedFileCloudinaryUrl} />
-            </div>
-          )}
-        </div>
+        {this.state.uploadedFileCloudinaryUrl === "" ? (
+          <div className="FileUpload">
+            <Dropzone
+              multiple={false}
+              accept="image/*"
+              onDrop={this.onImageDrop.bind(this)}
+            >
+              <p>Drop an image or click to select a file to upload.</p>
+            </Dropzone>
+          </div>
+        ) : (
+          <div>
+            <p>{this.state.uploadedFile.name}</p>
+            <img
+              className="image-after-upload"
+              src={this.state.uploadedFileCloudinaryUrl}
+            />
+          </div>
+        )}
       </div>
     );
   }

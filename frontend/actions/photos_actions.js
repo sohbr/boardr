@@ -35,6 +35,7 @@ export const postPhoto = photo => dispatch => {
     returnedPhoto => {
       dispatch(receivePhoto(returnedPhoto));
       dispatch(clearErrors());
+      return returnedPhoto.id;
     },
     err => dispatch(receiveErrors(err.responseJSON))
   );

@@ -100,20 +100,18 @@
 
 .header-logout-button {
   margin-left: 15px;
-  border: 1px solid white;
   color: white;
 }
 
 .header-upload-button {
   margin-left: 15px;
-  border: 1px solid white;
   color: white;
 }
 
 .fa.fa-power-off {
-  font-size: 22px;
+  font-size: 20px;
 }
 
-.fa-cloud-upload {
+.fa.fa-cloud-upload {
   font-size: 22px;
 }

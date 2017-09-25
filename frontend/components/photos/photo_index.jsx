@@ -22,8 +22,8 @@ class PhotoIndex extends React.Component {
       <div className="photo-index">
         <ul>
           {this.props.photos.map(photo => (
-            <Link to={`/photos/${photo.id}`}>
-              <PhotoIndexItem key={`photo-${photo.id}`} photo={photo} />
+            <Link key={`photo-${photo.id}`} to={`/photos/${photo.id}`}>
+              <PhotoIndexItem photo={photo} />
             </Link>
           ))}
         </ul>

@@ -9,13 +9,11 @@ const loggedInLinks = (currentUser, logout) => (
       className="header-upload-button"
       to={`/users/${currentUser.username}/upload`}
     >
-      upload link
-      <i class="fa-cloud-upload" aria-hidden="true" />
+      <i className="fa fa-cloud-upload" aria-hidden="true" />
     </Link>
 
     <button className="header-logout-button" onClick={logout}>
-      Log Out
-      <i class="fa fa-power-off" aria-hidden="true" />
+      <i className="fa fa-power-off" aria-hidden="true" />
     </button>
   </div>
 );

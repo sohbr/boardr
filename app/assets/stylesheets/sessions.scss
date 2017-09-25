@@ -95,3 +95,15 @@
   border-bottom: 1px solid black;
   font-size: 12px;
 }
+
+.modal-logo {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  justify-content: center;
+}
+
+.modal-logo-name {
+  display: flex;
+  align-items: center;
+}

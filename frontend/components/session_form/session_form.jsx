@@ -34,13 +34,12 @@ class SessionForm extends React.Component {
     }
   }
 
-  demoLogin(e) {
-    e.preventDefault();
-    this.setState({
+  demoLogin() {
+    let demoState = {
       username: "noob-Boardr",
       password: "password"
-    });
-    this.props.login(this.state).then(username => {
+    };
+    this.props.login(demoState).then(username => {
       this.props.history.push(`/users/${username}`);
     });
   }
@@ -144,7 +143,7 @@ class SessionForm extends React.Component {
         >
           <div className="form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              <ul>
+              <ul className="modal-logo">
                 <li className="logo">
                   <img
                     className="logo-icon"
@@ -152,7 +151,7 @@ class SessionForm extends React.Component {
                     alt="snowboard icon"
                   />
                 </li>
-                <li className="logo-name">boardr</li>
+                <li className="modal-logo-name">boardr</li>
               </ul>
 
               <div className="session-form">
