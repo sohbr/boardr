@@ -16,7 +16,7 @@ const App = () => (
     </header>
     <section>
       <AuthRoute exact path="/" component={Main} />
-      <ProtectedRoute path="/users/:userId" component={PhotoIndexContainer} />
+      <ProtectedRoute path="/users/:username" component={PhotoIndexContainer} />
       <Route exact path="/photos/:photoId" component={PhotoShowContainer} />
     </section>
   </div>

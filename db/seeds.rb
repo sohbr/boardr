@@ -8,8 +8,8 @@
 
 
 User.destroy_all
-u1 = User.create!(username: "Noob Boardr", password: "password")
-u2 = User.create!(username: "Senpai Boardr", password: "password")
+u1 = User.create!(username: "noob-Boardr", password: "password")
+u2 = User.create!(username: "senpai-Boardr", password: "password")
 
 Photo.destroy_all
 p1 = Photo.create!(

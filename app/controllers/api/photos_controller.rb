@@ -1,12 +1,12 @@
 class Api::PhotosController < ApplicationController
 
   def index
-    @photos = Photo.where(owner_id: params[:user_id])
+    @photos = Photo.where(ownername: params[:user_id])
   end
 
   def create
     @photo = Photo.new(photo_params)
-    @photo.owner_id = current_user.id
+    @photo.ownername = current_user.username
 
     if @photo.save
       render :show

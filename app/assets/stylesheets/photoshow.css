@@ -23,3 +23,27 @@
   height: 100%;
   object-fit: contain;
 }
+
+.show-bottom-half {
+  display: flex;
+  width: 100%;
+}
+
+.show-bottom-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 500px;
+  background-color: red;
+}
+
+.show-page-photo-details {
+}
+
+.show-bottom-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 500px;
+  background-color: green;
+}

@@ -58,8 +58,8 @@ export const getPhoto = photoId => dispatch =>
     err => dispatch(receiveErrors(err.responseJSON))
   );
 
-export const getPhotos = ownerId => dispatch =>
-  PhotosAPIUtil.getPhotos(ownerId).then(
+export const getPhotos = ownername => dispatch =>
+  PhotosAPIUtil.getPhotos(ownername).then(
     photos => {
       dispatch(receivePhotos(photos));
       dispatch(clearErrors());

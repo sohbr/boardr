@@ -23,12 +23,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.formType === "sign up") {
-      this.props.signup(this.state).then(id => {
-        this.props.history.push(`/users/${id}`);
+      this.props.signup(this.state).then(username => {
+        this.props.history.push(`/users/${username}`);
       });
     } else {
-      this.props.login(this.state).then(id => {
-        this.props.history.push(`/users/${id}`);
+      this.props.login(this.state).then(username => {
+        this.props.history.push(`/users/${username}`);
       });
     }
   }
