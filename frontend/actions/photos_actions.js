@@ -73,6 +73,7 @@ export const deletePhoto = photoId => dispatch =>
     photo => {
       dispatch(removePhoto(photo));
       dispatch(clearErrors());
+      return photo.ownername;
     },
     err => dispatch(receiveErrors(err.responseJSON))
   );
