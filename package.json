@@ -19,8 +19,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.6.0",
-    "webpack": "^3.6.0",
-    "babel-polyfill": "^6.26.0"
+    "webpack": "^3.6.0"
   },
   "description":
     "This README would normally document whatever steps are necessary to get the application up and running.",
