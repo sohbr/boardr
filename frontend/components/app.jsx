@@ -3,6 +3,7 @@ import NavBarContainer from "./navbar/navbar_container";
 import { Route } from "react-router-dom";
 import UploadForm from "./upload_form";
 import Main from "./main";
+import Footer from "./footer";
 
 import PhotoIndexContainer from "./photos/photo_index_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";

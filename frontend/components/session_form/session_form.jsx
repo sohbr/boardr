@@ -128,6 +128,17 @@ class SessionForm extends React.Component {
         >
           <div className="form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
+              <ul>
+                <li className="logo">
+                  <img
+                    className="logo-icon"
+                    src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5754411.jpg"
+                    alt="snowboard icon"
+                  />
+                </li>
+                <li className="logo-name">boardr</li>
+              </ul>
+
               <div className="session-form">
                 <label className="username-password">
                   username

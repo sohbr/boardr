@@ -9,6 +9,8 @@
 
 .login-input {
   border-right: 50px;
+  height: 20px;
+  padding: 0px;
 }
 
 .login-signup {
@@ -26,7 +28,7 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 10px;
-  padding: 50px;
+  padding: 20px;
   width: 170px;
   margin: 0 auto;
 }
@@ -87,4 +89,9 @@
 }
 
 .form-swap-button {
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 12px;
 }
