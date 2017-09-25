@@ -21,8 +21,8 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
   has_many :photos,
-    primary_key: :id,
-    foreign_key: :owner_id,
+    primary_key: :username,
+    foreign_key: :ownername,
     class_name: :Photo
 
   attr_reader :password

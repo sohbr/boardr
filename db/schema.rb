@@ -16,23 +16,23 @@ ActiveRecord::Schema.define(version: 20170922193809) do
   enable_extension "plpgsql"
 
   create_table "photos", force: :cascade do |t|
-    t.integer "owner_id", null: false
+    t.string "ownername", null: false
     t.string "img_url", null: false
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_photos_on_owner_id"
+    t.index ["ownername"], name: "index_photos_on_ownername"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "email"
     t.string "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 

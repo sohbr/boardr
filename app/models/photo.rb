@@ -13,11 +13,11 @@
 
 class Photo < ApplicationRecord
 
-  validates :owner_id, :img_url, presence: true
+  validates :ownername, :img_url, presence: true
 
   belongs_to :owner,
-    primary_key: :id,
-    foreign_key: :owner_id,
+    primary_key: :username,
+    foreign_key: :ownername,
     class_name: :User
 
 end
