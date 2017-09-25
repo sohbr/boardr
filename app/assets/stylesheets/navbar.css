@@ -48,33 +48,6 @@
   padding-right: 30px;
 }
 
-.session-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.login-input {
-  width: 100%;
-}
-
-.login-signup {
-  display: flex;
-  height: 18px;
-  margin-top: 3px;
-}
-
-.form-container {
-  text-align: center;
-}
-
-.login-form-box {
-  margin-top: 10px;
-  padding: 50px;
-  width: 275px;
-  margin: 0 auto;
-}
-
 .right-nav {
   display: flex;
   justify-content: space-between;
@@ -89,7 +62,7 @@
   width: 56px;
   font-size: 11px;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px double white;
   background-color: white;
   margin: 0 0 2px 0;
   box-sizing: border-box;
@@ -107,36 +80,4 @@
 .signup-button {
   margin-left: 8px;
   margin-right: 110px;
-}
-
-.session-form-modal {
-  /*width: 100px;*/
-  /*height: 100px;*/
-  line-height: 20px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /*margin-top: -200px;*/
-  /*margin-left: -300px;*/
-  background-color: white;
-  opacity: 0.8;
-  border-radius: 8px;
-  border: 1px solid black;
-  /*text-align: center;*/
-  z-index: 11;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 10;
-}
-
-.username-password {
-  font-size: 12px;
 }
