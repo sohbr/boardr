@@ -8,10 +8,22 @@ class PhotoIndexItem extends React.Component {
 
   render() {
     const { photo } = this.props;
+
     return (
-      <div className="photo-item">
+      <Link
+        key={`photo-${photo.id}`}
+        to={`/photos/${photo.id}`}
+        className="photo-item"
+        style={{
+          width: photo.width * 200 / photo.height + "px"
+        }}
+      >
+        <i
+          className="i-photo-index"
+          style={{ paddingBottom: photo.height / photo.width * 100 + "%" }}
+        />
         <img className="photo-item-photo" src={photo.img_url} />
-      </div>
+      </Link>
     );
   }
 }
