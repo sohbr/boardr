@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
 
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :set_img_url
 
   has_many :photos,
     primary_key: :username,
@@ -50,6 +50,11 @@ class User < ApplicationRecord
 
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
+  end
+
+  def set_img_url
+    self.img_url = "http://res.cloudinary.com/sohnbrian/image/upload/v1506457897/default-snowboard-profile_ycung0.png"
+    self.save!
   end
 
 end

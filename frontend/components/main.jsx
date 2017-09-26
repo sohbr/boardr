@@ -14,8 +14,8 @@ const mainWelcome = () => {
 
 const Main = () => {
   return (
-    <div className="background-img">
-      {mainWelcome()}
+    <div>
+      <div className="background-img">{mainWelcome()}</div>
       <Footer />
     </div>
   );

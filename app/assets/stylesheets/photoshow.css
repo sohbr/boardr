@@ -1,3 +1,10 @@
+.show-whole {
+  background-image: url("http://res.cloudinary.com/sohnbrian/image/upload/v1506453476/background-img-for-all_irbh0g.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
 .show-top-half {
   width: 100%;
   height: 600px;
@@ -57,7 +64,6 @@
   flex-direction: column;
   width: 50%;
   height: 500px;
-  background-color: red;
 }
 
 .show-bottom-left-photo-details {
@@ -68,13 +74,30 @@
 }
 
 .show-bottom-left-user-img {
-  width: 40%;
+  display: flex;
+  width: 50%;
   justify-content: flex-end;
   min-height: 100px;
+  margin-right: 10px;
+}
+
+.container-for-photo-owner-img {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-owner-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
 }
 
 .show-bottom-left-user-title-description {
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -103,5 +126,4 @@
   flex-direction: column;
   width: 50%;
   height: 500px;
-  background-color: green;
 }

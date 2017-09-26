@@ -17,6 +17,7 @@ const App = () => (
     </header>
     <section>
       <Switch>
+        <AuthRoute exact path="/" component={Main} />
         <ProtectedRoute
           exact
           path="/users/:username"
@@ -28,7 +29,6 @@ const App = () => (
           path="/users/:username/upload"
           component={PhotoUploadContainer}
         />
-        <AuthRoute exact path="/" component={Main} />
       </Switch>
     </section>
   </div>

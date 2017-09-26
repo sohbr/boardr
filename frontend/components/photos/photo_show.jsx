@@ -84,7 +84,7 @@ class PhotoShow extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="show-whole">
         <div className="show-top-half">
           <div className="show-page-img-container">
             <img className="show-page-img" src={this.props.photo.img_url} />
@@ -103,7 +103,12 @@ class PhotoShow extends React.Component {
           <div className="show-bottom-left">
             <div className="show-bottom-left-photo-details">
               <div className="show-bottom-left-user-img">
-                <div>user profile image</div>
+                <div>
+                  <img
+                    className="photo-owner-img"
+                    src={this.props.currentUser.img_url}
+                  />
+                </div>
               </div>
               <div className="show-bottom-left-user-title-description">
                 <div className="--username">{this.props.photo.ownername}</div>

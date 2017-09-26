@@ -2,7 +2,7 @@
 
 json.session do
   json.currentUser do
-    json.extract! @user, :username, :id
+    json.extract! @user, :username, :id, :img_url
   end
 end
 

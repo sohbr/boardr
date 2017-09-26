@@ -28,23 +28,45 @@ const rightBar = (currentUser, logout) => (
   </div>
 );
 
-const NavBar = ({ currentUser, logout }) => (
-  <nav className="main-nav">
-    <div className="left-nav">
-      <ul>
-        <li className="logo">
-          <img
-            className="logo-icon"
-            src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5754411.jpg"
-            alt="snowboard icon"
-          />
-        </li>
-        <li className="logo-name">boardr</li>
-      </ul>
-    </div>
+const NavBar = ({ currentUser, logout }) => {
+  return (
+    <nav className="main-nav">
+      <div className="left-nav">
+        {currentUser ? (
+          <ul>
+            <li className="logo">
+              <Link to={`/users/${currentUser.username}`}>
+                <img
+                  className="logo-icon"
+                  src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5754411.jpg"
+                  alt="snowboard icon"
+                />
+              </Link>
+            </li>
+            <Link className="logo-name" to={`/users/${currentUser.username}`}>
+              boardr
+            </Link>
+          </ul>
+        ) : (
+          <ul>
+            <li className="logo">
+              <Link to="/">
+                <img
+                  className="logo-icon"
+                  src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5754411.jpg"
+                  alt="snowboard icon"
+                />
+              </Link>
+            </li>
+            <Link className="logo-name" to="/">
+              boardr
+            </Link>
+          </ul>
+        )}
+      </div>
 
-    {rightBar(currentUser, logout)}
-  </nav>
-);
-
+      {rightBar(currentUser, logout)}
+    </nav>
+  );
+};
 export default NavBar;

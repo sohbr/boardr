@@ -20,9 +20,11 @@ class PhotoIndex extends React.Component {
 
     return (
       <div className="photo-index">
-        <section className="magic-css">
-          {this.props.photos.map(photo => <PhotoIndexItem photo={photo} />)}
-        </section>
+        <div className="magic-css">
+          {this.props.photos.map(photo => (
+            <PhotoIndexItem key={`key-${photo.id}`} photo={photo} />
+          ))}
+        </div>
       </div>
     );
   }
