@@ -9,7 +9,9 @@ class PhotoUpload extends React.Component {
       ownername: `${this.props.currentUser.username}`,
       img_url: "",
       title: "",
-      description: ""
+      description: "",
+      height: 0,
+      width: 0
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,9 +19,11 @@ class PhotoUpload extends React.Component {
     this.setUrl = this.setUrl.bind(this);
   }
 
-  setUrl(url) {
+  setUrl(response) {
     this.setState({
-      img_url: url
+      img_url: response.secure_url,
+      height: response.height,
+      width: response.width
     });
   }
 

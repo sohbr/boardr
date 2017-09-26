@@ -33,7 +33,6 @@ class UploadForm extends React.Component {
       if (err) {
         console.error(err);
       }
-
       if (response.body.secure_url !== "") {
         this.setState({
           uploadedFileCloudinaryUrl: response.body.secure_url

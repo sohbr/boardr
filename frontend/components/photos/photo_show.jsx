@@ -25,6 +25,17 @@ class PhotoShow extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.getPhoto(this.props.match.params.photoId);
+  }
+
+  componentWillReceiveProps(newProps) {
+    const { match: { params: { photoId } }, getPhoto } = this.props;
+    if (photoId !== newProps.match.params.photoId) {
+      getPhoto(newProps.match.params.photoId);
+    }
+  }
+
   update(field) {
     return e => {
       e.preventDefault();
@@ -69,17 +80,6 @@ class PhotoShow extends React.Component {
 
     this.props.patchPhoto(this.state);
     this.closeEditModal();
-  }
-
-  componentWillMount() {
-    this.props.getPhoto(this.props.match.params.photoId);
-  }
-
-  componentWillReceiveProps(newProps) {
-    const { match: { params: { photoId } }, getPhoto } = this.props;
-    if (photoId !== newProps.match.params.photoId) {
-      getPhoto(newProps.match.params.photoId);
-    }
   }
 
   render() {

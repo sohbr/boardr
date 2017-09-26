@@ -6,6 +6,7 @@ import values from "lodash/values";
 
 const mapStateToProps = state => {
   return {
+    current_username: state.session.currentUser.username,
     photos: values(state.entities.photos)
   };
 };

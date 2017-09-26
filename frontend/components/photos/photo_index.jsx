@@ -9,8 +9,8 @@ class PhotoIndex extends React.Component {
   }
 
   componentDidMount() {
-    const { match: { params: { username } }, getPhotos } = this.props;
-    getPhotos(username);
+    const { getPhotos } = this.props;
+    getPhotos(this.props.current_username);
   }
 
   render() {
