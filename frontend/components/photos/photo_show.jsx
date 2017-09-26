@@ -103,7 +103,7 @@ class PhotoShow extends React.Component {
           <div className="show-bottom-left">
             <div className="show-bottom-left-photo-details">
               <div className="show-bottom-left-user-img">
-                <div>
+                <div className="container-for-photo-owner-img">
                   <img
                     className="photo-owner-img"
                     src={this.props.currentUser.img_url}
