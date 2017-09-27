@@ -1,6 +1,14 @@
+.upload-whole {
+  background-image: url("http://res.cloudinary.com/sohnbrian/image/upload/v1506453476/background-img-for-all_irbh0g.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .upload-top-half {
   width: 100%;
-  height: 600px;
+  height: 500px;
   background-color: #212124;
 
   display: flex;
@@ -10,9 +18,17 @@
 }
 
 .upload-img-container {
-  width: 750px;
-  height: 500px;
+  width: 600px;
+  height: 400px;
   margin: 70px 50px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-for-image-after-upload {
+  width: 600px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,4 +43,5 @@
 .upload-bottom-half {
   display: flex;
   width: 100%;
+  height: 500px;
 }

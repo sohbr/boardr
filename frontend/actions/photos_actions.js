@@ -16,9 +16,9 @@ export const receivePhotos = photos => ({
   photos
 });
 
-export const removePhoto = photoId => ({
+export const removePhoto = photo => ({
   type: REMOVE_PHOTO,
-  photoId
+  photo
 });
 
 export const clearErrors = () => ({

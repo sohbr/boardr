@@ -1,0 +1,17 @@
+.album-index {
+  background-image: url("http://res.cloudinary.com/sohnbrian/image/upload/v1506453476/background-img-for-all_irbh0g.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 900px;
+}
+
+.album-title {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 24px;
+  color: #626262;
+}

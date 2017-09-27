@@ -25,6 +25,11 @@ class User < ApplicationRecord
     foreign_key: :ownername,
     class_name: :Photo
 
+  has_many :albums,
+    primary_key: :username,
+    foreign_key: :ownername,
+    class_name: :Album
+
   attr_reader :password
 
   def reset_session_token!

@@ -23,9 +23,26 @@
 .left-nav > ul {
   list-style: none;
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding-top: 6px;
   padding-left: 30px;
+}
+
+.leftbar-logged-in-links {
+  display: flex;
+  flex-direction: row;
+  margin-left: 19px;
+  margin-bottom: 6px;
+}
+
+.leftbar-buttons {
+  font-size: 11px;
+  margin: 8px;
+}
+
+.leftbar-buttons:hover {
+  color: gray;
 }
 
 .logo {
@@ -92,6 +109,7 @@
 }
 
 .logged-in-links {
+  height: 39px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -99,20 +117,31 @@
   margin-right: 60px;
 }
 
-.header-logout-button {
+.header-img {
+  max-height: 100%;
+  max-width: 8%;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: white;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.header-logout-button,
+.header-upload-button {
+  margin-top: 3px;
   margin-left: 15px;
   color: white;
 }
-
-.header-upload-button {
-  margin-left: 15px;
-  color: white;
+.header-logout-button:hover,
+.header-upload-button:hover {
+  color: gray;
 }
 
 .fa.fa-power-off {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .fa.fa-cloud-upload {
-  font-size: 22px;
+  font-size: 24px;
 }

@@ -43,7 +43,7 @@ class PhotoUpload extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="upload-whole">
         <div className="upload-top-half">
           <div className="upload-img-container">
             <UploadForm setUrl={this.setUrl} />

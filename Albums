@@ -1,0 +1,23 @@
+      create  app/controllers/api_controller.rb
+       route  get 'api/destroy'
+       route  get 'api/update'
+       route  get 'api/create'
+       route  get 'api/show'
+       route  get 'api/index'
+      invoke  erb
+       exist    app/views/api
+      create    app/views/api/index.html.erb
+      create    app/views/api/show.html.erb
+      create    app/views/api/create.html.erb
+      create    app/views/api/update.html.erb
+      create    app/views/api/destroy.html.erb
+      invoke  test_unit
+      create    test/controllers/api_controller_test.rb
+      invoke  helper
+      create    app/helpers/api_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/api.coffee
+      invoke    scss
+      create      app/assets/stylesheets/api.scss

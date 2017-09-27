@@ -14,14 +14,18 @@ class Album < ApplicationRecord
 
   validates :ownername, :title, presence: true
 
-  has_many :photos,
+  has_many :photo_albums,
     primary_key: :id,
-    foreign_key: :photo_id,
-    class_name: :Photo
+    foreign_key: :album_id,
+    class_name: :PhotoAlbum
+
+  has_many :photos,
+    through: :photo_albums,
+    source: :photo
 
   belongs_to :owner,
     primary_key: :username,
-    foriegn_key: :ownername,
+    foreign_key: :ownername,
     class_name: :User
 
 end

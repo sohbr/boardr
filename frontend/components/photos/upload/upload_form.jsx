@@ -33,11 +33,12 @@ class UploadForm extends React.Component {
       if (err) {
         console.error(err);
       }
+
       if (response.body.secure_url !== "") {
         this.setState({
           uploadedFileCloudinaryUrl: response.body.secure_url
         });
-        this.props.setUrl(response.body.secure_url);
+        this.props.setUrl(response.body);
       }
     });
   }
@@ -56,8 +57,7 @@ class UploadForm extends React.Component {
             </Dropzone>
           </div>
         ) : (
-          <div>
-            <p>{this.state.uploadedFile.name}</p>
+          <div className="container-for-image-after-upload">
             <img
               className="image-after-upload"
               src={this.state.uploadedFileCloudinaryUrl}

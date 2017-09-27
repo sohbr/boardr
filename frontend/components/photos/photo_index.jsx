@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link, Route, withRouter } from "react-router-dom";
 import PhotoIndexItem from "./photo_index_item";
 
@@ -20,6 +19,7 @@ class PhotoIndex extends React.Component {
 
     return (
       <div className="photo-index">
+        <div className="photostream-title">photostream</div>
         <div className="magic-css">
           {this.props.photos.map(photo => (
             <PhotoIndexItem key={`key-${photo.id}`} photo={photo} />

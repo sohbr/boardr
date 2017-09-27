@@ -4,7 +4,7 @@ import SessionFormContainer from "../session_form/session_form_container";
 
 const loggedInLinks = (currentUser, logout) => (
   <div className="logged-in-links">
-    <h2 className="header-name">Welcome, {currentUser.username}.</h2>
+    <img className="header-img" src={currentUser.img_url} />
     <Link
       className="header-upload-button"
       to={`/users/${currentUser.username}/upload`}
@@ -17,6 +17,25 @@ const loggedInLinks = (currentUser, logout) => (
     </button>
   </div>
 );
+
+const leftBar = currentUser => {
+  return (
+    <div className="leftbar-logged-in-links">
+      <Link className="leftbar-buttons" to={`/users/${currentUser.username}`}>
+        Photostream
+      </Link>
+      <Link
+        className="leftbar-buttons"
+        to={`/users/${currentUser.username}/albums`}
+      >
+        Albums
+      </Link>
+      <Link className="leftbar-buttons" to={`/explore`}>
+        Explore
+      </Link>
+    </div>
+  );
+};
 
 const rightBar = (currentUser, logout) => (
   <div className="right-nav">
@@ -46,6 +65,7 @@ const NavBar = ({ currentUser, logout }) => {
             <Link className="logo-name" to={`/users/${currentUser.username}`}>
               boardr
             </Link>
+            {leftBar(currentUser)}
           </ul>
         ) : (
           <ul>

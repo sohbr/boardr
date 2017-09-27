@@ -5,6 +5,7 @@ import Root from "./components/root";
 
 import * as sessionActions from "./actions/session_actions";
 import * as PhotosActions from "./actions/photos_actions";
+import * as AlbumsActions from "./actions/albums_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -33,3 +34,9 @@ window.getPhotos = PhotosActions.getPhotos;
 window.getPhoto = PhotosActions.getPhoto;
 window.patchPhoto = PhotosActions.patchPhoto;
 window.deletePhoto = PhotosActions.deletePhoto;
+
+window.postAlbum = AlbumsActions.postAlbum;
+window.getAlbums = AlbumsActions.getAlbums;
+window.getAlbum = AlbumsActions.getAlbum;
+window.patchAlbum = AlbumsActions.patchAlbum;
+window.deleteAlbum = AlbumsActions.deleteAlbum;

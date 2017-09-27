@@ -6,8 +6,9 @@ import Main from "./main";
 import Footer from "./footer";
 import PhotoShowContainer from "./photos/photo_show_container";
 import PhotoUploadContainer from "./photos/upload/photo_upload_container";
-
 import PhotoIndexContainer from "./photos/photo_index_container";
+import AlbumIndexContainer from "./albums/album_index_container";
+
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
@@ -23,11 +24,20 @@ const App = () => (
           path="/users/:username"
           component={PhotoIndexContainer}
         />
-        <Route exact path="/photos/:photoId" component={PhotoShowContainer} />
+        <ProtectedRoute
+          exact
+          path="/photos/:photoId"
+          component={PhotoShowContainer}
+        />
         <ProtectedRoute
           exact
           path="/users/:username/upload"
           component={PhotoUploadContainer}
+        />
+        <ProtectedRoute
+          exact
+          path="/users/:username/albums"
+          component={AlbumIndexContainer}
         />
       </Switch>
     </section>
