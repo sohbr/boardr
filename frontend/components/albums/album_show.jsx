@@ -18,12 +18,14 @@ class AlbumShow extends React.Component {
 
   render() {
     const { currentUser, album } = this.props;
+    debugger;
     return (
       <div className="album-show">
         <div className="album-title">{album.title}</div>
         <div className="album-cover-img-div">
           <img className="album-cover-img" src={album.photos[0].img_url} />
         </div>
+        <div className="album-description">{album.description}</div>
         <div className="divider" />
         <div className="magic-css">
           {album.photos.map(photo => (

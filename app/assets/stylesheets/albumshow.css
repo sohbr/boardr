@@ -17,6 +17,17 @@
   color: #626262;
 }
 
+.album-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 14px;
+  color: #626262;
+}
+
 .divider {
   margin: 20px 0 10px;
   height: 40px;

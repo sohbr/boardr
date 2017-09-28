@@ -5,7 +5,7 @@ class Api::AlbumsController < ApplicationController
 
   def show
 
-    @album = Album.includes(:photos).find_by(id: params[:id])
+    @album = Album.includes(:photos).where(id: params[:id])
 
     if @album
       render :show
