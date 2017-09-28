@@ -14,6 +14,7 @@ class AlbumIndex extends React.Component {
     return (
       <div className="album-index">
         <div className="album-title">albums</div>
+        <div className="album-index-container" />
       </div>
     );
   }

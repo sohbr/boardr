@@ -11,10 +11,10 @@ export const getAlbums = ownername =>
     url: `/api/users/${ownername}/albums`
   });
 
-export const getAlbum = albumId =>
+export const getAlbum = id =>
   $.ajax({
     method: "GET",
-    url: `/api/albums/${albumId}`
+    url: `/api/albums/${id}`
   });
 
 export const patchAlbum = album =>
@@ -27,5 +27,6 @@ export const patchAlbum = album =>
 export const deleteAlbum = albumId =>
   $.ajax({
     method: "DELETE",
-    url: `/api/albums/${albumId}`
+    url: `/api/albums/${albumId}`,
+    data: { albumId }
   });

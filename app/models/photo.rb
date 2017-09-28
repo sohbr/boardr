@@ -20,11 +20,12 @@ class Photo < ApplicationRecord
   has_many :photo_albums,
     primary_key: :id,
     foreign_key: :photo_id,
-    class_name: :PhotoAlbum
+    class_name: :PhotoAlbum,
+    dependent: :destroy
 
   has_many :albums,
     through: :photo_albums,
-    source: :album,
+    source: :album
 
   belongs_to :owner,
     primary_key: :username,

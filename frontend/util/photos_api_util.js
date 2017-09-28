@@ -5,16 +5,17 @@ export const postPhoto = photo =>
     data: { photo }
   });
 
-export const getPhotos = ownerId =>
+export const getPhotos = ownername =>
   $.ajax({
     method: "GET",
-    url: `/api/users/${ownerId}/photos`
+    url: `/api/users/${ownername}/photos`
   });
 
 export const getPhoto = photoId =>
   $.ajax({
     method: "GET",
-    url: `/api/photos/${photoId}`
+    url: `/api/photos/${photoId}`,
+    data: { photoId }
   });
 
 export const patchPhoto = photo =>
@@ -27,5 +28,6 @@ export const patchPhoto = photo =>
 export const deletePhoto = photoId =>
   $.ajax({
     method: "DELETE",
-    url: `/api/photos/${photoId}`
+    url: `/api/photos/${photoId}`,
+    data: { photoId }
   });

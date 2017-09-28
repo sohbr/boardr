@@ -16,7 +16,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.find(params[:id])
+    @photo = Photo.where(id: params[:id])
   end
 
   def update

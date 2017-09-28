@@ -70,9 +70,11 @@ class PhotoShow extends React.Component {
   }
 
   handleDelete() {
-    this.props.deletePhoto(this.props.photo.id).then(username => {
-      this.props.history.push(`/users/${username}`);
+    this.setState({
+      deleteModalOpen: false
     });
+    this.props.deletePhoto(this.props.photo.id);
+    this.props.history.push(`/users/${this.props.currentUser.username}`);
   }
 
   handleSubmit(e) {
@@ -83,6 +85,10 @@ class PhotoShow extends React.Component {
   }
 
   render() {
+    if (this.props.photo.img_url === undefined) {
+      return null;
+    }
+
     return (
       <div className="show-whole">
         <div className="show-top-half">
