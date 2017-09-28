@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
 
   demoLogin() {
     let demoState = {
-      username: "noob-Boardr",
+      username: "uberBoardr",
       password: "password"
     };
     this.props.login(demoState).then(username => {

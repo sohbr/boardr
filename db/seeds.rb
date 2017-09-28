@@ -8,8 +8,12 @@
 
 
 User.destroy_all
-u1 = User.create!(username: "noob-Boardr", password: "password")
-u2 = User.create!(username: "senpai-Boardr", password: "password")
+u1 = User.create!(username: "uberBoardr", password: "password")
+u2 = User.create!(username: "proBoardr", password: "password")
+u3 = User.create!(username: "iBoard", password: "password")
+u4 = User.create!(username: "boards_r_us", password: "password")
+u5 = User.create!(username: "grandma", password: "password")
+u6 = User.create!(username: "freshPOW", password: "password")
 
 Photo.destroy_all
 p1 = Photo.create!(
@@ -175,118 +179,95 @@ p20 = Photo.create!(
 
 Album.destroy_all
 a1 = Album.create!(
-  ownername: "noob-Boardr",
+  ownername: "uberBoardr",
   title: "Greatness",
   description: "This was that time when it was so great."
 )
 a2 = Album.create!(
-  ownername: "noob-Boardr",
+  ownername: "uberBoardr",
   title: "Awesome times",
   description: "This was that time when it was so awesome."
 )
 a3 = Album.create!(
-  ownername: "noob-Boardr",
+  ownername: "uberBoardr",
   title: "Unbelievable",
   description: "This was that time when it was so unbelievable."
 )
 
 PhotoAlbum.destroy_all
-pa1 = PhotoAlbum.create!(
-  photo_id: p1.id,
-  album_id: a1.id
-)
+pa1 = PhotoAlbum.create!(photo_id: p1.id, album_id: a1.id)
+pa2 = PhotoAlbum.create!(photo_id: p2.id, album_id: a1.id)
+pa3 = PhotoAlbum.create!(photo_id: p3.id, album_id: a1.id)
+pa4 = PhotoAlbum.create!(photo_id: p4.id, album_id: a1.id)
+pa5 = PhotoAlbum.create!(photo_id: p5.id, album_id: a1.id)
+pa6 = PhotoAlbum.create!(photo_id: p6.id, album_id: a1.id)
+pa7 = PhotoAlbum.create!(photo_id: p7.id, album_id: a1.id)
+pa8 = PhotoAlbum.create!(photo_id: p8.id, album_id: a2.id)
+pa9 = PhotoAlbum.create!(photo_id: p9.id, album_id: a2.id)
+pa10 = PhotoAlbum.create!(photo_id: p10.id, album_id: a2.id)
+pa11 = PhotoAlbum.create!(photo_id: p11.id, album_id: a2.id)
+pa12 = PhotoAlbum.create!(photo_id: p12.id, album_id: a2.id)
+pa13 = PhotoAlbum.create!(photo_id: p13.id, album_id: a2.id)
+pa14 = PhotoAlbum.create!(photo_id: p14.id, album_id: a2.id)
+pa15 = PhotoAlbum.create!(photo_id: p15.id, album_id: a3.id)
+pa16 = PhotoAlbum.create!(photo_id: p16.id, album_id: a3.id)
+pa17 = PhotoAlbum.create!(photo_id: p17.id, album_id: a3.id)
+pa18 = PhotoAlbum.create!(photo_id: p18.id, album_id: a3.id)
+pa19 = PhotoAlbum.create!(photo_id: p19.id, album_id: a3.id)
+pa20 = PhotoAlbum.create!(photo_id: p20.id, album_id: a3.id)
 
-pa2 = PhotoAlbum.create!(
-  photo_id: p2.id,
-  album_id: a1.id
-)
+Tag.destroy_all
+Tag.create!(word: "snow", photo_id: p1.id)
+Tag.create!(word: "snow", photo_id: p2.id)
+Tag.create!(word: "snow", photo_id: p3.id)
+Tag.create!(word: "snow", photo_id: p4.id)
+Tag.create!(word: "snow", photo_id: p5.id)
+Tag.create!(word: "snow", photo_id: p6.id)
+Tag.create!(word: "snow", photo_id: p7.id)
+Tag.create!(word: "snow", photo_id: p8.id)
+Tag.create!(word: "snow", photo_id: p9.id)
+Tag.create!(word: "snow", photo_id: p10.id)
+Tag.create!(word: "board", photo_id: p1.id)
+Tag.create!(word: "board", photo_id: p2.id)
+Tag.create!(word: "board", photo_id: p3.id)
+Tag.create!(word: "board", photo_id: p4.id)
+Tag.create!(word: "board", photo_id: p5.id)
+Tag.create!(word: "board", photo_id: p6.id)
+Tag.create!(word: "board", photo_id: p7.id)
+Tag.create!(word: "board", photo_id: p8.id)
+Tag.create!(word: "board", photo_id: p9.id)
+Tag.create!(word: "board", photo_id: p10.id)
+Tag.create!(word: "board", photo_id: p11.id)
+Tag.create!(word: "board", photo_id: p12.id)
+Tag.create!(word: "board", photo_id: p13.id)
+Tag.create!(word: "board", photo_id: p14.id)
+Tag.create!(word: "board", photo_id: p15.id)
+Tag.create!(word: "board", photo_id: p16.id)
+Tag.create!(word: "board", photo_id: p17.id)
+Tag.create!(word: "board", photo_id: p18.id)
+Tag.create!(word: "board", photo_id: p19.id)
+Tag.create!(word: "board", photo_id: p20.id)
 
-pa3 = PhotoAlbum.create!(
-  photo_id: p3.id,
-  album_id: a1.id
-)
+Comment.destroy_all
 
-pa4 = PhotoAlbum.create!(
-  photo_id: p4.id,
-  album_id: a1.id
-)
+comments_bank = [
+  "This is a great picture.",
+  "Very nice shot!",
+  "Breathtaking.",
+  "Amazing shot!",
+  "Where did you learn to take photos like this?",
+  "Where is this?",
+  "Hey! I remember this picture!",
+  "Can't wait until next time.",
+  "Good times.",
+  "When are we going to go again?",
+  "Hahaha"
+  ]
 
-pa5 = PhotoAlbum.create!(
-  photo_id: p5.id,
-  album_id: a1.id
-)
-
-pa6 = PhotoAlbum.create!(
-  photo_id: p6.id,
-  album_id: a1.id
-)
-
-pa7 = PhotoAlbum.create!(
-  photo_id: p7.id,
-  album_id: a1.id
-)
-
-pa8 = PhotoAlbum.create!(
-  photo_id: p8.id,
-  album_id: a2.id
-)
-
-pa9 = PhotoAlbum.create!(
-  photo_id: p9.id,
-  album_id: a2.id
-)
-
-pa10 = PhotoAlbum.create!(
-  photo_id: p10.id,
-  album_id: a2.id
-)
-
-pa11 = PhotoAlbum.create!(
-  photo_id: p11.id,
-  album_id: a2.id
-)
-
-pa12 = PhotoAlbum.create!(
-  photo_id: p12.id,
-  album_id: a2.id
-)
-
-pa13 = PhotoAlbum.create!(
-  photo_id: p13.id,
-  album_id: a2.id
-)
-
-pa14 = PhotoAlbum.create!(
-  photo_id: p14.id,
-  album_id: a2.id
-)
-
-pa15 = PhotoAlbum.create!(
-  photo_id: p15.id,
-  album_id: a3.id
-)
-
-pa16 = PhotoAlbum.create!(
-  photo_id: p16.id,
-  album_id: a3.id
-)
-
-pa17 = PhotoAlbum.create!(
-  photo_id: p17.id,
-  album_id: a3.id
-)
-
-pa18 = PhotoAlbum.create!(
-  photo_id: p18.id,
-  album_id: a3.id
-)
-
-pa19 = PhotoAlbum.create!(
-  photo_id: p19.id,
-  album_id: a3.id
-)
-
-pa20 = PhotoAlbum.create!(
-  photo_id: p20.id,
-  album_id: a3.id
-)
+(1..Photo.count).each do |photo_id|
+  random_comments = comments_bank.sample(3)
+  user_id = (1..User.count).to_a
+  random_comments.each do |comment|
+    Comment.create!(body: comment, user_id: user_id.sample, photo_id: photo_id)
+  end
+end
