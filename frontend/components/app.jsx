@@ -1,6 +1,6 @@
 import React from "react";
 import NavBarContainer from "./navbar/navbar_container";
-import { Route } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
 import { Switch } from "react-router";
 import Main from "./main";
 import Footer from "./footer";
@@ -8,15 +8,16 @@ import PhotoShowContainer from "./photos/photo_show_container";
 import PhotoUploadContainer from "./photos/upload/photo_upload_container";
 import PhotoIndexContainer from "./photos/photo_index_container";
 import AlbumIndexContainer from "./albums/album_index_container";
+import AlbumShowContainer from "./albums/album_show_container";
 
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
-const App = () => (
-  <div>
+const App = props => (
+  <main>
     <header>
       <NavBarContainer />
     </header>
-    <section>
+    <section className={props.location.pathname === "/" ? "homepage" : ""}>
       <Switch>
         <AuthRoute exact path="/" component={Main} />
         <ProtectedRoute
@@ -39,9 +40,15 @@ const App = () => (
           path="/users/:username/albums"
           component={AlbumIndexContainer}
         />
+        <ProtectedRoute
+          exact
+          path="/albums/:albumId"
+          component={AlbumShowContainer}
+        />
       </Switch>
     </section>
-  </div>
+    <Footer className={props.location.pathname === "/" ? "homepage" : ""} />
+  </main>
 );
 
-export default App;
+export default withRouter(App);

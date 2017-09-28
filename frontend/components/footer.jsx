@@ -1,8 +1,8 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = props => {
   return (
-    <footer className="footer">
+    <footer className={`footer ${props.className}`}>
       <div className="footer-link">
         <a href="https://github.com/sohbr/boardr">
           <i className="fa fa-github" aria-hidden="true" />

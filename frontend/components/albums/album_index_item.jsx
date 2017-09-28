@@ -7,7 +7,24 @@ class AlbumIndexItem extends React.Component {
     super(props);
   }
 
-  render() {}
+  render() {
+    const { album } = this.props;
+
+    if (album.photos[0] === undefined) {
+      return null;
+    }
+
+    return (
+      <Link
+        key={`album-${album.id}`}
+        to={`/albums/${album.id}`}
+        className="stack"
+      >
+        <img className="album-item-photo" src={album.photos[0].img_url} />
+        <span> {album.title}</span>
+      </Link>
+    );
+  }
 }
 
 export default AlbumIndexItem;

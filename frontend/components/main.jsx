@@ -16,7 +16,6 @@ const Main = () => {
   return (
     <div>
       <div className="background-img">{mainWelcome()}</div>
-      <Footer />
     </div>
   );
 };

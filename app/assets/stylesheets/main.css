@@ -1,11 +1,28 @@
+main {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main > section {
+  flex: 1 1;
+}
+
+main > footer {
+  flex: 0 0 40px;
+}
+
+main > section > div {
+  height: 100%;
+}
+
 .background-img {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
   background: url(http://res.cloudinary.com/sohnbrian/image/upload/v1506102062/joshua-reddekopp-217223_k5l13j.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -47,9 +64,11 @@
 }
 
 .footer {
-  width: 100%;
+  /*width: 100%;*/
   height: 40px;
-  position: absolute;
+  position: relative;
+  right: 0;
+  left: 0;
   bottom: 0;
   display: flex;
   flex-direction: row;
@@ -57,8 +76,13 @@
   align-items: center;
 
   font-size: 36px;
+  background-color: #606262;
+  z-index: 5;
+}
+
+.footer.homepage {
   background-color: black;
-  z-index: 10;
+  opacity: 0.9;
 }
 
 .footer div {
@@ -75,16 +99,16 @@
 
 .footer i {
   color: white;
-  opacity: 0.5;
   transition: opacity 0.2s;
 }
 
 .footer i:hover {
-  opacity: 1;
+  color: darkgray;
 }
 
 .fa.fa-envelope,
 .fa.fa-github,
 .fa.fa-linkedin {
   font-size: 22px;
+  color: white;
 }

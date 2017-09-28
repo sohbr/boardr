@@ -3,6 +3,6 @@ json.extract! @album, :id, :ownername, :title, :description,
 
 json.photos do
   json.array! @album.photos do |photo|
-    json.extract! photo, :id, :img_url
+    json.extract! photo, :id, :ownername, :img_url, :title, :description, :created_at, :updated_at, :width, :height
   end
 end

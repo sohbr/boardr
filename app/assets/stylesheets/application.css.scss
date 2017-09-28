@@ -17,6 +17,7 @@
 
 html,
 body,
+#root,
 main,
 main > div {
   width: 100%;
@@ -24,19 +25,6 @@ main > div {
   padding: 0;
   margin: 0;
   font-family: helvetica, sans-serif;
-}
-
-body {
-  background: url(http://res.cloudinary.com/sohnbrian/image/upload/v1506102062/joshua-reddekopp-217223_k5l13j.jpg);
-  background-position: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 * {

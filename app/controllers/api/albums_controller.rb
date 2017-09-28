@@ -1,12 +1,11 @@
 class Api::AlbumsController < ApplicationController
   def index
-    @albums = Album.where(ownername: params[:user_id])
+    @albums = Album.includes(:photos).where(ownername: params[:user_id])
   end
 
   def show
 
     @album = Album.includes(:photos).find_by(id: params[:id])
-    debugger;
 
     if @album
       render :show
