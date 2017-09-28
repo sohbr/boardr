@@ -20,6 +20,7 @@ const App = props => (
     <section className={props.location.pathname === "/" ? "homepage" : ""}>
       <Switch>
         <AuthRoute exact path="/" component={Main} />
+        <ProtectedRoute exact path="/" component={PhotoIndexContainer} />
         <ProtectedRoute
           exact
           path="/users/:username"

@@ -32,5 +32,9 @@ class Photo < ApplicationRecord
     foreign_key: :ownername,
     class_name: :User
 
+  has_many :tags,
+    primary_key: :id,
+    foreign_key: :photo_id,
+    class_name: :Tag
 
 end

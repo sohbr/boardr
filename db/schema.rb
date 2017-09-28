@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927223812) do
+ActiveRecord::Schema.define(version: 20170928212146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20170927223812) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ownername"], name: "index_albums_on_ownername"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.integer "user_id"
+    t.integer "photo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id"], name: "index_comments_on_photo_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "photo_albums", force: :cascade do |t|
@@ -42,6 +52,14 @@ ActiveRecord::Schema.define(version: 20170927223812) do
     t.integer "width", null: false
     t.integer "height", null: false
     t.index ["ownername"], name: "index_photos_on_ownername"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "word", null: false
+    t.integer "photo_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["word", "photo_id"], name: "index_tags_on_word_and_photo_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
