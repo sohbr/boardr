@@ -1,6 +1,7 @@
 class Api::AlbumsController < ApplicationController
   def index
     @albums = Album.includes(:photos).where(ownername: params[:user_id])
+    debugger;
   end
 
   def show
