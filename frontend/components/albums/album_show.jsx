@@ -18,7 +18,6 @@ class AlbumShow extends React.Component {
 
   render() {
     const { currentUser, album } = this.props;
-    debugger;
     return (
       <div className="album-show">
         <div className="album-title">{album.title}</div>

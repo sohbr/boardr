@@ -172,3 +172,121 @@ p20 = Photo.create!(
   width: 900,
   height: 602
 )
+
+Album.destroy_all
+a1 = Album.create!(
+  ownername: "noob-Boardr",
+  title: "Greatness",
+  description: "This was that time when it was so great."
+)
+a2 = Album.create!(
+  ownername: "noob-Boardr",
+  title: "Awesome times",
+  description: "This was that time when it was so awesome."
+)
+a3 = Album.create!(
+  ownername: "noob-Boardr",
+  title: "Unbelievable",
+  description: "This was that time when it was so unbelievable."
+)
+
+PhotoAlbum.destroy_all
+pa1 = PhotoAlbum.create!(
+  photo_id: p1.id,
+  album_id: a1.id
+)
+PhotoAlbum.destroy_all
+pa2 = PhotoAlbum.create!(
+  photo_id: p2.id,
+  album_id: a1.id
+)
+PhotoAlbum.destroy_all
+pa3 = PhotoAlbum.create!(
+  photo_id: p3.id,
+  album_id: a1.id
+)
+PhotoAlbum.destroy_all
+pa4 = PhotoAlbum.create!(
+  photo_id: p4.id,
+  album_id: a1.id
+)
+PhotoAlbum.destroy_all
+pa5 = PhotoAlbum.create!(
+  photo_id: p5.id,
+  album_id: a1.id
+)
+PhotoAlbum.destroy_all
+pa6 = PhotoAlbum.create!(
+  photo_id: p6.id,
+  album_id: a1.id
+)
+PhotoAlbum.destroy_all
+pa7 = PhotoAlbum.create!(
+  photo_id: p7.id,
+  album_id: a1.id
+)
+PhotoAlbum.destroy_all
+pa8 = PhotoAlbum.create!(
+  photo_id: p8.id,
+  album_id: a2.id
+)
+PhotoAlbum.destroy_all
+pa9 = PhotoAlbum.create!(
+  photo_id: p9.id,
+  album_id: a2.id
+)
+PhotoAlbum.destroy_all
+pa10 = PhotoAlbum.create!(
+  photo_id: p10.id,
+  album_id: a2.id
+)
+PhotoAlbum.destroy_all
+pa11 = PhotoAlbum.create!(
+  photo_id: p11.id,
+  album_id: a2.id
+)
+PhotoAlbum.destroy_all
+pa12 = PhotoAlbum.create!(
+  photo_id: p12.id,
+  album_id: a2.id
+)
+PhotoAlbum.destroy_all
+pa13 = PhotoAlbum.create!(
+  photo_id: p13.id,
+  album_id: a2.id
+)
+PhotoAlbum.destroy_all
+pa14 = PhotoAlbum.create!(
+  photo_id: p14.id,
+  album_id: a2.id
+)
+PhotoAlbum.destroy_all
+pa15 = PhotoAlbum.create!(
+  photo_id: p15.id,
+  album_id: a3.id
+)
+PhotoAlbum.destroy_all
+pa16 = PhotoAlbum.create!(
+  photo_id: p16.id,
+  album_id: a3.id
+)
+PhotoAlbum.destroy_all
+pa17 = PhotoAlbum.create!(
+  photo_id: p17.id,
+  album_id: a3.id
+)
+PhotoAlbum.destroy_all
+pa18 = PhotoAlbum.create!(
+  photo_id: p18.id,
+  album_id: a3.id
+)
+PhotoAlbum.destroy_all
+pa19 = PhotoAlbum.create!(
+  photo_id: p19.id,
+  album_id: a3.id
+)
+PhotoAlbum.destroy_all
+pa20 = PhotoAlbum.create!(
+  photo_id: p20.id,
+  album_id: a3.id
+)
