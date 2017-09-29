@@ -47,7 +47,29 @@ class TagIndex extends React.Component {
         />
       ));
 
-    return <div className="tag-index-container">{tagItems}</div>;
+    return (
+      <div className="bottom-right-container">
+        <div className="tag-index-container">
+          <div className="tag-title">Tags</div>
+          {tagItems}
+        </div>
+        {currentUser.username === photo.ownername ? (
+          <form className="add-tag-form" onSubmit={this.handleSubmit}>
+            <textarea
+              className="add-tag"
+              value={this.state.word}
+              placeholder="...add a tag..."
+              onChange={this.update("word")}
+            />
+            <button className="submit-comment" type="submit">
+              add tag
+            </button>
+          </form>
+        ) : (
+          <div />
+        )}
+      </div>
+    );
   }
 }
 

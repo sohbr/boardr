@@ -1,17 +1,12 @@
 class Api::TagsController < ApplicationController
   def index
-    if params.key?(:photo_id)
-      @tags = Photo.find_by(id: params[:photo_id]).tags
-    else
-      @tags = Tag.all
-    end
-    render :index
+    @tags = Photo.find_by(id: params[:photo_id]).tags
   end
 
   def show
   end
 
-  def update
+  def create
     @tag = Tag.new(tag_params)
 
     if @tag.save

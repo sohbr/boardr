@@ -1,10 +1,14 @@
+.bottom-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .tag-item {
   display: flex;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   padding: 5px;
   margin: 10px;
-  justify-content: center;
   text-align: center;
 }
 
@@ -24,4 +28,20 @@
 .delete-tag-word-button:hover {
   color: darkgray;
   transition: 0.2s;
+}
+.add-tag-form {
+  width: 70%;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add-tag {
+  width: 60%;
+}
+.tag-title {
+  width: 70%;
+  text-align: center;
+  margin: 20px 0 10px;
 }
