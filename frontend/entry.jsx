@@ -18,25 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
 });
-
-window.signup = sessionActions.signup;
-window.logout = sessionActions.logout;
-window.login = sessionActions.login;
-
-window.postPhoto = PhotosActions.postPhoto;
-window.getPhotos = PhotosActions.getPhotos;
-window.getPhoto = PhotosActions.getPhoto;
-window.patchPhoto = PhotosActions.patchPhoto;
-window.deletePhoto = PhotosActions.deletePhoto;
-
-window.postAlbum = AlbumsActions.postAlbum;
-window.getAlbums = AlbumsActions.getAlbums;
-window.getAlbum = AlbumsActions.getAlbum;
-window.patchAlbum = AlbumsActions.patchAlbum;
-window.deleteAlbum = AlbumsActions.deleteAlbum;

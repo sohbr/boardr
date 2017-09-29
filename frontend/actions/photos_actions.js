@@ -25,10 +25,12 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
-  errors
-});
+export const receiveErrors = errors => {
+  return {
+    type: RECEIVE_ERRORS,
+    errors
+  };
+};
 
 export const postPhoto = photo => dispatch => {
   return PhotosAPIUtil.postPhoto(photo).then(
@@ -37,7 +39,9 @@ export const postPhoto = photo => dispatch => {
       dispatch(clearErrors());
       return returnedPhoto.id;
     },
-    err => dispatch(receiveErrors(err.responseJSON))
+    err => {
+      dispatch(receiveErrors(err.responseJSON));
+    }
   );
 };
 
