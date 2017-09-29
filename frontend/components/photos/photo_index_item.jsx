@@ -15,7 +15,8 @@ class PhotoIndexItem extends React.Component {
         to={`/photos/${photo.id}`}
         className="photo-item"
         style={{
-          width: photo.width * 200 / photo.height + "px"
+          width: photo.width * 200 / photo.height + "px",
+          flexGrow: photo.width * 200 / photo.height
         }}
       >
         <i
