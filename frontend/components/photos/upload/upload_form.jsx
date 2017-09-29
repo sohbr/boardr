@@ -47,7 +47,7 @@ class UploadForm extends React.Component {
     return (
       <div>
         {this.state.uploadedFileCloudinaryUrl === "" ? (
-          <div className="FileUpload">
+          <div className="file-upload">
             <Dropzone
               multiple={false}
               accept="image/*"

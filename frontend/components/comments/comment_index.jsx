@@ -23,13 +23,17 @@ class CommentIndex extends React.Component {
           comment={comment}
           currentUser={currentUser}
           deleteComment={deleteComment}
+          patchComment={patchComment}
         />
       ));
 
     return (
       <div className="comment-index-container">
-        <div className="comments-header">Comments</div>
-        <ul className="comment-index">{commentItems}</ul>
+        <div className="comment-index-container-left" />
+        <div className="comment-index-container-right">
+          <div className="comments-header">Comments</div>
+          <ul className="comment-index">{commentItems}</ul>
+        </div>
       </div>
     );
   }

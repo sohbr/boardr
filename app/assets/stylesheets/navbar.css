@@ -74,6 +74,12 @@
   align-items: center;
 }
 
+.header-username {
+  margin-right: 22px;
+  font-size: 11px;
+  color: white;
+}
+
 .demo-button,
 .login-button,
 .signup-button {

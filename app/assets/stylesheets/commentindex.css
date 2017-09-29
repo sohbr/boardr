@@ -1,0 +1,12 @@
+.comment-index-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-index-container-left {
+  width: 40%;
+}
+
+.comment-index-container-right {
+  width: 60%;
+}

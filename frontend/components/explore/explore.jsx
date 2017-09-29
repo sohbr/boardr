@@ -21,7 +21,7 @@ class Explore extends React.Component {
 
     return (
       <div className="photo-index">
-        <div className="photostream-title">explore</div>
+        <div className="photostream-title">Explore</div>
         <div className="magic-css">
           {randomizedPhotos.map(photo => (
             <PhotoIndexItem key={`key-${photo.id}`} photo={photo} />

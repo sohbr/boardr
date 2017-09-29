@@ -145,11 +145,7 @@ class SessionForm extends React.Component {
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <ul className="modal-logo">
                 <li className="logo">
-                  <img
-                    className="logo-icon"
-                    src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5754411.jpg"
-                    alt="snowboard icon"
-                  />
+                  <i className="fa fa-snowflake-o" aria-hidden="true" />
                 </li>
                 <li className="modal-logo-name">boardr</li>
               </ul>

@@ -8,11 +8,11 @@ class PhotoShow extends React.Component {
     super(props);
 
     this.state = {
-      title: this.props.photo.title,
-      description: this.props.photo.description,
-      ownername: this.props.photo.ownername,
-      img_url: this.props.photo.img_url,
-      id: this.props.photo.id,
+      title: "",
+      description: "",
+      ownername: "",
+      img_url: "",
+      id: "",
       editModalOpen: false,
       deleteModalOpen: false
     };
@@ -28,12 +28,22 @@ class PhotoShow extends React.Component {
 
   componentDidMount() {
     this.props.getPhoto(this.props.match.params.photoId);
+    window.scrollTo(0, 0);
   }
 
   componentWillReceiveProps(newProps) {
     const { match: { params: { photoId } }, getPhoto } = this.props;
     if (photoId !== newProps.match.params.photoId) {
       getPhoto(newProps.match.params.photoId);
+    }
+    if (this.props.photo) {
+      this.setState({
+        title: this.props.photo.title,
+        description: this.props.photo.description,
+        ownername: this.props.photo.ownername,
+        img_url: this.props.photo.img_url,
+        id: this.props.photo.id
+      });
     }
   }
 
@@ -80,13 +90,13 @@ class PhotoShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    debugger;
     this.props.patchPhoto(this.state);
     this.closeEditModal();
   }
 
   render() {
-    if (this.props.photo.img_url === undefined) {
+    if (!this.props.photo || this.props.photo.img_url === undefined) {
       return null;
     }
 
@@ -95,16 +105,25 @@ class PhotoShow extends React.Component {
         <div className="show-top-half">
           <div className="show-page-img-container">
             <img className="show-page-img" src={this.props.photo.img_url} />
+            {this.props.currentUser.username === this.props.photo.ownername ? (
+              <div>
+                <button
+                  className="edit-photo-button"
+                  onClick={this.openEditModal}
+                >
+                  <i className="fa fa-pencil-square-o" aria-hidden="true" />
+                </button>
+                <button
+                  className="delete-photo-button"
+                  onClick={this.openDeleteModal}
+                >
+                  <i className="fa fa-trash-o" aria-hidden="true" />
+                </button>
+              </div>
+            ) : (
+              <div />
+            )}
           </div>
-          <button
-            className="delete-photo-button"
-            onClick={this.openDeleteModal}
-          >
-            <i className="fa fa-trash-o" aria-hidden="true" />
-          </button>
-          <button className="edit-photo-button" onClick={this.openEditModal}>
-            <i className="fa fa-pencil-square-o" aria-hidden="true" />
-          </button>
         </div>
         <div className="show-bottom-half">
           <div className="show-bottom-left">
@@ -139,13 +158,13 @@ class PhotoShow extends React.Component {
           <div className="delete-modal-delete-confirmation">
             Are you sure you want to delete?
             <button className="confirmation-button" onClick={this.handleDelete}>
-              YES
+              yes
             </button>
             <button
               className="confirmation-button"
               onClick={this.closeDeleteModal}
             >
-              NO
+              no
             </button>
           </div>
         </Modal>
@@ -163,7 +182,7 @@ class PhotoShow extends React.Component {
                   title
                   <input
                     name="title"
-                    className="edit-title-description-input"
+                    className="edit-title-input"
                     type="text"
                     value={this.state.title}
                     onChange={this.update("title")}
@@ -173,9 +192,9 @@ class PhotoShow extends React.Component {
 
                 <label className="edit-title-description-label">
                   description
-                  <input
+                  <textarea
                     name="description"
-                    className="edit-title-description-input"
+                    className="edit-description-input"
                     type="text"
                     value={this.state.description}
                     onChange={this.update("description")}
@@ -184,7 +203,7 @@ class PhotoShow extends React.Component {
                 <br />
                 <br />
                 <button className="submit-edit" type="submit">
-                  EDIT
+                  edit
                 </button>
               </div>
             </form>

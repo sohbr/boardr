@@ -18,6 +18,9 @@ class AlbumShow extends React.Component {
 
   render() {
     const { currentUser, album } = this.props;
+    if (this.props.album === undefined) {
+      return null;
+    }
     return (
       <div className="album-show">
         <div className="album-title">{album.title}</div>

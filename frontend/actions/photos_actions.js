@@ -56,6 +56,7 @@ export const getPhoto = photoId => dispatch =>
     photo => {
       dispatch(receivePhoto(photo));
       dispatch(clearErrors());
+      return photo;
     },
     err => dispatch(receiveErrors(err.responseJSON))
   );

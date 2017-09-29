@@ -11,31 +11,34 @@
   background-color: #212124;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.show-page-img-container {
+  display: flex;
+  flex-direction: column;
+}
 
 .delete-photo-button {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
+  border: 1px solid darkgray;
 }
 
 .fa.fa-trash-o {
   font-size: 22px;
-  color: white;
+  color: darkgray;
 }
 
 .edit-photo-button {
-  position: absolute;
-  bottom: 5px;
-  right: 40px;
+  margin-top: 10px;
+  width: 17px;
+  margin-right: 10px;
+  border: 1px solid darkgray;
 }
 
 .fa.fa-pencil-square-o {
   font-size: 22px;
-  color: white;
+  color: darkgray;
 }
 
 .show-page-img-container {
@@ -130,4 +133,84 @@
   flex-direction: column;
   width: 50%;
   height: 500px;
+}
+
+.delete-modal,
+.edit-modal {
+  /*width: 100px;*/
+  /*height: 100px;*/
+  line-height: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*margin-top: -200px;*/
+  /*margin-left: -300px;*/
+  background-color: white;
+  opacity: 1;
+  border-radius: 8px;
+  border: 1px solid black;
+  /*text-align: center;*/
+  z-index: 11;
+}
+
+.delete-modal-overlay,
+.edit-modal-overlay {
+  content: " ";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.edit-form-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  font-size: 12px;
+}
+.edit-title-description-label {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-title-input {
+  width: 80%;
+}
+.edit-description-input {
+  border: 1px solid black;
+  width: 80%;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.submit-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-bottom: 15px;
+
+  width: 25px;
+  height: 16px;
+}
+
+.delete-modal-delete-confirmation {
+  margin: 10px;
+  display: flex;
+  height: 100px;
+  width: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.confirmation-button {
+  margin: 5px 0;
 }

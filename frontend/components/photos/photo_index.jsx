@@ -10,6 +10,7 @@ class PhotoIndex extends React.Component {
   componentDidMount() {
     const { getPhotos } = this.props;
     getPhotos(this.props.current_username);
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -19,7 +20,7 @@ class PhotoIndex extends React.Component {
 
     return (
       <div className="photo-index">
-        <div className="photostream-title">photostream</div>
+        <div className="photostream-title">Photostream</div>
         <div className="magic-css">
           {this.props.photos.map(photo => (
             <PhotoIndexItem key={`key-${photo.id}`} photo={photo} />

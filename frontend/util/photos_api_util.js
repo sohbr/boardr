@@ -24,12 +24,13 @@ export const getPhoto = photoId =>
     data: { photoId }
   });
 
-export const patchPhoto = photo =>
-  $.ajax({
+export const patchPhoto = photo => {
+  return $.ajax({
     method: "PATCH",
     url: `/api/photos/${photo.id}`,
     data: { photo }
   });
+};
 
 export const deletePhoto = photoId =>
   $.ajax({
