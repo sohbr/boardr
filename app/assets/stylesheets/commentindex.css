@@ -9,4 +9,51 @@
 
 .comment-index-container-right {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-index-item-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.iic-left-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.comment-iic-left {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.comment-iic-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.comment-owner {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 12px;
+}
+.comment-itself {
+  margin: 5px 0 10px 20px;
+}
+.edit-comment {
+  margin: 9px 1px 0 10px;
+}
+.edit-comment:hover {
+  color: darkgray;
+  cursor: pointer;
+}
+.delete-comment {
+  margin: 8px 15px 0 7px;
+}
+.delete-comment:hover {
+  color: darkgray;
+  cursor: pointer;
 }

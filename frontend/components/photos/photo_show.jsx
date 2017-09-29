@@ -90,7 +90,6 @@ class PhotoShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
     this.props.patchPhoto(this.state);
     this.closeEditModal();
   }

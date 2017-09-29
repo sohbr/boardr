@@ -17,6 +17,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def update
+    debugger;
     @comment = Comment.find(params[:id])
 
     if @comment.update_attributes(comment_params)

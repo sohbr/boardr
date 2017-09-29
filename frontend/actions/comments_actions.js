@@ -48,8 +48,8 @@ export const getComments = photoId => dispatch =>
     err => dispatch(receiveErrors(err.responseJSON))
   );
 
-export const patchComment = (formComment, id) => dispatch =>
-  CommentsAPIUtil.patchComment(formComment, id).then(
+export const patchComment = comment => dispatch =>
+  CommentsAPIUtil.patchComment(comment).then(
     comment => {
       dispatch(receiveComment(comment));
       dispatch(clearErrors());

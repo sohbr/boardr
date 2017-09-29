@@ -10,6 +10,10 @@ class AlbumShow extends React.Component {
     this.props.getAlbum(this.props.match.params.albumId);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.albumId !== newProps.match.params.albumId) {
       this.props.getAlbum(newProps.match.params.albumId);
@@ -23,11 +27,11 @@ class AlbumShow extends React.Component {
     }
     return (
       <div className="album-show">
-        <div className="album-title">{album.title}</div>
+        <div className="album-title">{`~ ${album.title} ~`}</div>
         <div className="album-cover-img-div">
           <img className="album-cover-img" src={album.photos[0].img_url} />
         </div>
-        <div className="album-description">{album.description}</div>
+        <div className="album-description">{`- ${album.description} -`}</div>
         <div className="divider" />
         <div className="magic-css">
           {album.photos.map(photo => (

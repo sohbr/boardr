@@ -11,11 +11,11 @@ export const postComment = data =>
     data
   });
 
-export const patchComment = (comment, id) =>
+export const patchComment = comment =>
   $.ajax({
     method: "PATCH",
-    url: `api/comments/${id}`,
-    data: comment
+    url: `api/comments/${comment.id}`,
+    data: { comment }
   });
 
 export const deleteComment = comment =>

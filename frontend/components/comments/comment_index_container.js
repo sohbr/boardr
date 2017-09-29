@@ -2,7 +2,8 @@ import { connect } from "react-redux";
 import {
   getComments,
   deleteComment,
-  patchComment
+  patchComment,
+  clearErrors
 } from "../../actions/comments_actions";
 import values from "lodash/values";
 import CommentIndex from "./comment_index";
@@ -17,7 +18,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   getComments: photoId => dispatch(getComments(photoId)),
   patchComment: (comment, id) => dispatch(patchComment(comment)),
-  deleteComment: comment => dispatch(deleteComment(comment))
+  deleteComment: comment => dispatch(deleteComment(comment)),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CommentIndex);
