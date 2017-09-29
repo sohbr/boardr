@@ -52,7 +52,6 @@ class CommentIndexItem extends React.Component {
   }
 
   handleSubmit() {
-    debugger;
     this.props.patchComment(this.state);
     this.closeEditModal();
   }

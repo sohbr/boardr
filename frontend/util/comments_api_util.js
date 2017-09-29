@@ -4,11 +4,11 @@ export const getComments = photoId =>
     url: `api/photos/${photoId}/comments`
   });
 
-export const postComment = data =>
+export const postComment = comment =>
   $.ajax({
     method: "POST",
     url: "api/comments",
-    data
+    data: { comment }
   });
 
 export const patchComment = comment =>

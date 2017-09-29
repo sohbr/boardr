@@ -41,7 +41,8 @@
   margin-left: 12px;
 }
 .comment-itself {
-  margin: 5px 0 10px 20px;
+  margin: 0px 20px 10px 20px;
+  font-size: 12px;
 }
 .edit-comment {
   margin: 9px 1px 0 10px;
@@ -56,4 +57,32 @@
 .delete-comment:hover {
   color: darkgray;
   cursor: pointer;
+}
+.add-comment {
+  margin-top: 15px;
+  width: 99%;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.add-comment-form {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.submit-comment {
+  font-size: 12px;
+  border: white;
+  background-color: white;
+  margin: 10px 0 25px;
+  align-self: center;
+  height: 15px;
+  color: #212124;
+}
+.submit-comment:hover {
+  color: white;
+  background-color: #212124;
+  border: #212124;
 }

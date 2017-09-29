@@ -21,19 +21,23 @@
 }
 
 .delete-photo-button {
-  border: 1px solid darkgray;
 }
 
 .fa.fa-trash-o {
   font-size: 22px;
   color: darkgray;
 }
-
+.fa.fa-trash-o:hover {
+  color: white;
+}
+.delete-photo-button {
+  border: 0;
+}
 .edit-photo-button {
   margin-top: 10px;
   width: 17px;
   margin-right: 10px;
-  border: 1px solid darkgray;
+  border: 0;
 }
 
 .fa.fa-pencil-square-o {
@@ -41,6 +45,9 @@
   color: darkgray;
 }
 
+.fa.fa-pencil-square-o:hover {
+  color: white;
+}
 .show-page-img-container {
   width: 600px;
   height: 400px;
@@ -137,20 +144,15 @@
 
 .delete-modal,
 .edit-modal {
-  /*width: 100px;*/
-  /*height: 100px;*/
   line-height: 20px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*margin-top: -200px;*/
-  /*margin-left: -300px;*/
   background-color: white;
   opacity: 1;
   border-radius: 8px;
   border: 1px solid black;
-  /*text-align: center;*/
   z-index: 11;
 }
 
