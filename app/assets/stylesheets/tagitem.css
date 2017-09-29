@@ -18,6 +18,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 70%;
+  max-width: 250px;
   margin-top: 50px;
 }
 
