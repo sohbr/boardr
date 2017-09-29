@@ -1,6 +1,11 @@
 class Api::TagsController < ApplicationController
   def index
-    @tags = Photo.find_by(id: params[:photo_id]).tags
+    if params.key?(:photo_id)
+      @tags = Photo.find_by(id: params[:photo_id]).tags
+    else
+      @tags = Tag.all
+    end
+    render :index
   end
 
   def show

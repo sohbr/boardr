@@ -8,7 +8,7 @@
 
 
 User.destroy_all
-u1 = User.create!(username: "uberBoardr", password: "password")
+u1 = User.create!(username: "demoBoardr", password: "password")
 u2 = User.create!(username: "proBoardr", password: "password")
 u3 = User.create!(username: "iBoard", password: "password")
 u4 = User.create!(username: "boards_r_us", password: "password")
@@ -357,17 +357,17 @@ Photo.create!(
 
 Album.destroy_all
 a1 = Album.create!(
-  ownername: "uberBoardr",
+  ownername: "demoBoardr",
   title: "Greatness",
   description: "This was that time when it was so great."
 )
 a2 = Album.create!(
-  ownername: "uberBoardr",
+  ownername: "demoBoardr",
   title: "Awesome times",
   description: "This was that time when it was so awesome."
 )
 a3 = Album.create!(
-  ownername: "uberBoardr",
+  ownername: "demoBoardr",
   title: "Unbelievable",
   description: "This was that time when it was so unbelievable."
 )
@@ -425,6 +425,31 @@ Tag.create!(word: "board", photo_id: p17.id)
 Tag.create!(word: "board", photo_id: p18.id)
 Tag.create!(word: "board", photo_id: p19.id)
 Tag.create!(word: "board", photo_id: p20.id)
+
+tags_bank = [
+  "fun",
+  "awesome",
+  "cool",
+  "icey",
+  "unbelievable",
+  "best trip",
+  "vacay",
+  "wow",
+  "gnarly",
+  "mountain",
+  "snowboard",
+  "trip",
+  "2017",
+  "winter",
+  "cold"
+]
+
+(1..Photo.count).each do |photo_id|
+  random_tags = tags_bank.sample(3)
+  random_tags.each do |tag|
+    Tag.create!(word: tag, photo_id: photo_id)
+  end
+end
 
 Comment.destroy_all
 

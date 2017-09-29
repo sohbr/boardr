@@ -1,0 +1,27 @@
+.tag-item {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.tag-index-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  margin-top: 50px;
+}
+
+.tag-word {
+  margin-right: 10px;
+}
+
+.delete-tag-word-button:hover {
+  color: darkgray;
+  transition: 0.2s;
+}

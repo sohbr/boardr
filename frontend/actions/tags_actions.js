@@ -1,4 +1,4 @@
-import * as TagsAPIUtil from "../util/tag_api_util";
+import * as TagsAPIUtil from "../util/tags_api_util";
 
 export const RECEIVE_TAGS = "RECEIVE_TAGS";
 export const RECEIVE_TAG = "RECEIVE_TAG";

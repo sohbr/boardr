@@ -5,7 +5,6 @@ class TagIndexItem extends React.Component {
     super(props);
 
     this.handleDelete = this.handleDelete.bind(this);
-    this.deleteTag = this.deleteTag.bind(this);
   }
 
   handleDelete(e) {
@@ -17,8 +16,7 @@ class TagIndexItem extends React.Component {
   render() {
     const { tag, currentUser, photo } = this.props;
     let deleteButton;
-
-    if (currentUser.id === photo.user_id) {
+    if (currentUser.username === photo.ownername) {
       deleteButton = (
         <div className="delete-tag" onClick={this.handleDelete}>
           <i className="fa fa-minus-circle" aria-hidden="true" />
@@ -28,8 +26,8 @@ class TagIndexItem extends React.Component {
 
     return (
       <div className="tag-item">
-        <div>{tag.name}</div>
-        {deleteButton}
+        <div className="tag-word">{tag.word}</div>
+        <div className="delete-tag-word-button">{deleteButton}</div>
       </div>
     );
   }

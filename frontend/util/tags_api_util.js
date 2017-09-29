@@ -14,5 +14,6 @@ export const postTag = tag =>
 export const deleteTag = tag =>
   $.ajax({
     method: "DELETE",
-    url: `api/tags/${tag.id}`
+    url: `api/tags/${tag.id}`,
+    data: { tag }
   });

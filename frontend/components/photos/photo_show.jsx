@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../footer";
 import Modal from "react-modal";
 import CommentIndexContainer from "../comments/comment_index_container";
+import TagIndexContainer from "../tags/tag_index_container";
 
 class PhotoShow extends React.Component {
   constructor(props) {
@@ -145,7 +146,9 @@ class PhotoShow extends React.Component {
             </div>
             <CommentIndexContainer />
           </div>
-          <div className="show-bottom-right" />
+          <div className="show-bottom-right">
+            <TagIndexContainer />
+          </div>
         </div>
         <Modal
           isOpen={this.state.deleteModalOpen}

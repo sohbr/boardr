@@ -35,7 +35,6 @@ class TagIndex extends React.Component {
 
   render() {
     const { tags, photo, deleteTag, currentUser } = this.props;
-
     const tagItems =
       tags &&
       tags.map(tag => (
@@ -48,11 +47,7 @@ class TagIndex extends React.Component {
         />
       ));
 
-    return (
-      <div className="tag-index-container">
-        <ul className="tag-index">{tagItems}</ul>
-      </div>
-    );
+    return <div className="tag-index-container">{tagItems}</div>;
   }
 }
 
