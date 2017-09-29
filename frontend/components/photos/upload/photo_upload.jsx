@@ -51,9 +51,9 @@ class PhotoUpload extends React.Component {
         </div>
         <div className="upload-bottom-half">
           <div className="upload-details">
-            <form onSubmit={this.handleSubmit}>
+            <form className="upload-form" onSubmit={this.handleSubmit}>
               <label className="upload-title">
-                title:
+                <div className="upload-labels">title</div>
                 <input
                   name="title"
                   className="upload-title-input"
@@ -64,7 +64,7 @@ class PhotoUpload extends React.Component {
               </label>
               <br />
               <label className="upload-description">
-                description:
+                <div className="upload-labels">description</div>
                 <input
                   name="title"
                   className="upload-title-description"
@@ -73,8 +73,9 @@ class PhotoUpload extends React.Component {
                   onChange={this.update("description")}
                 />
               </label>
-              <button className="upload-button" type="submit">
-                UPLOAD
+              <br />
+              <button className="submit-comment" type="submit">
+                upload
               </button>
             </form>
           </div>

@@ -61,6 +61,7 @@ main > section > div {
 .footer-link {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .footer {
