@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 70%;
-  max-width: 250px;
+  max-width: 320px;
   margin-top: 50px;
 }
 
@@ -31,6 +31,7 @@
   transition: 0.2s;
 }
 .add-tag-form {
+  max-width: 320px
   width: 70%;
   margin-top: 6px;
   display: flex;
