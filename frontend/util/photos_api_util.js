@@ -1,3 +1,9 @@
+export const getAllPhotos = () =>
+  $.ajax({
+    method: "GET",
+    url: "/api/photos"
+  });
+
 export const postPhoto = photo =>
   $.ajax({
     method: "POST",

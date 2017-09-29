@@ -1,7 +1,13 @@
 class Api::PhotosController < ApplicationController
 
   def index
-    @photos = Photo.where(ownername: params[:user_id])
+    if params.key?(:user_id)
+      @photos = Photo.where(ownername: params[:user_id])
+    else
+      @photos = Photo.all.shuffle
+    end
+
+    render :index
   end
 
   def create
@@ -16,7 +22,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.where(id: params[:id])
+    @photo = Photo.find(params[:id])
   end
 
   def update

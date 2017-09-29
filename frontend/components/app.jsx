@@ -9,6 +9,7 @@ import PhotoUploadContainer from "./photos/upload/photo_upload_container";
 import PhotoIndexContainer from "./photos/photo_index_container";
 import AlbumIndexContainer from "./albums/album_index_container";
 import AlbumShowContainer from "./albums/album_show_container";
+import ExploreContainer from "./explore/explore_container";
 
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
@@ -46,6 +47,7 @@ const App = props => (
           path="/albums/:albumId"
           component={AlbumShowContainer}
         />
+        <ProtectedRoute exact path="/explore" component={ExploreContainer} />
       </Switch>
     </section>
     <Footer className={props.location.pathname === "/" ? "homepage" : ""} />

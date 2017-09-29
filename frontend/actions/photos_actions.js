@@ -69,6 +69,15 @@ export const getPhotos = ownername => dispatch =>
     err => dispatch(receiveErrors(err.responseJSON))
   );
 
+export const getAllPhotos = () => dispatch =>
+  PhotosAPIUtil.getAllPhotos().then(
+    photos => {
+      dispatch(receivePhotos(photos));
+      dispatch(clearErrors());
+    },
+    err => dispatch(receiveErrors(err.responseJSON))
+  );
+
 export const deletePhoto = photoId => dispatch =>
   PhotosAPIUtil.deletePhoto(photoId).then(
     photo => {

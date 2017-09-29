@@ -13,7 +13,7 @@ class CommentIndex extends React.Component {
   }
 
   render() {
-    const { comments, currentUser, deleteComment } = this.props;
+    const { comments, currentUser, deleteComment, patchComment } = this.props;
 
     const commentItems =
       comments &&

@@ -176,6 +176,184 @@ p20 = Photo.create!(
   width: 900,
   height: 602
 )
+Photo.create!(
+  title: "My world",
+  description: "Welcome to my world.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506213833/Japan-Snow-4K_i7rw0f.jpg",
+  ownername: u2.username,
+  width: 1200,
+  height: 675
+)
+Photo.create!(
+  title: "Yo.",
+  description: "What's up over there?.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214032/snowboarding_eihaew.jpg",
+  ownername: u2.username,
+  width: 620,
+  height: 413
+)
+Photo.create!(
+  title: "I'm fly",
+  description: "Can you fly?",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214032/snowboarding-wallpaper1-copy_ty0ts9.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 602
+)
+Photo.create!(
+  title: "Dusty",
+  description: "Dust off my shoulder, please.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214031/Snowboarding-Wallpaper-Hd-Hd-1080P-11-HD-Wallpapers-copy_n7kcoh.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 563
+)
+Photo.create!(
+  title: "Crevice",
+  description: "It's like surfing a wave.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214031/snowboarding-wallpaper-12-copy_fzlzny.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 720
+)
+Photo.create!(
+  title: "Snowflakes",
+  description: "Carving a masterpiece.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214030/snowboarding-wallpaper-copy_hg8hx0.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 506
+)
+Photo.create!(
+  title: "Hang ten",
+  description: "Lookin' fly in my red jumpsuit",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214030/snowboarding-wallpaper-6-742547-copy_gjs7qr.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 675
+)
+Photo.create!(
+  title: "On cloud 9",
+  description: "Am I really up here?",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214030/snowboarding-wallpaper-7-copy_klp97q.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 675
+)
+Photo.create!(
+  title: "Refresh",
+  description: "Getting a glimpse of the sun",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214029/snowboarding-wallpaper-5-copy_swspsd.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 563
+)
+Photo.create!(
+  title: "Rooftop",
+  description: "Removing snow with my board.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214029/snowboarding-wallpaper-3-copy_rdceri.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 598
+)
+Photo.create!(
+  title: "Happily Ever After",
+  description: "Man and wife are celebrating their marriage on the slopes.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214028/Snowboarding-Mountains-Hd-Cool-7-HD-Wallpapers-copy_pyzou6.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 600
+)
+Photo.create!(
+  title: "Bread crumbs",
+  description: "Leaving a trail for people to follow.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214028/snowboarding-wallpaper-1-copy_itjq6h.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 506
+)
+Photo.create!(
+  title: "Olympian Athlete",
+  description: "Watching one of the best at the sport of snowboarding.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214027/snowboarding-sport-1024x575-copy_upsa4x.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 505
+)
+Photo.create!(
+  title: "Surfing",
+  description: "Surf's up",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214026/Snowboarding-hd-wallpaper-picture-image-photo-for-dekstop-copy_bqjtyh.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 506
+)
+Photo.create!(
+  title: "Sunny shot",
+  description: "Dragging the elbow along the slope",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214020/snowboard-2_tsfegg.jpg",
+  ownername: u2.username,
+  width: 1200,
+  height: 800
+)
+Photo.create!(
+  title: "Another Olympian",
+  description: "Olympian on her custom snowboard.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214021/Snowboard_Winter_Olympics_Day_4_x9moItS6gldx_ls1ih0.jpg",
+  ownername: u2.username,
+  width: 1024,
+  height: 683
+)
+Photo.create!(
+  title: "Mid trick",
+  description: "Sliding up for an olley on a sleek white board",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214020/snowboard-copy_ubcplj.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 633
+)
+Photo.create!(
+  title: "Taking a break",
+  description: "Getting a glimpse of the sunset while taking a break.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214009/seasonlongrentals750_y8tmqh.jpg",
+  ownername: u2.username,
+  width: 750,
+  height: 422
+)
+Photo.create!(
+  title: "Goggles",
+  description: "Shy lady hides behind her board and goggles.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214019/Snowboard-and-Ski-Goggles-Reviews_m6uf3c.jpg",
+  ownername: u2.username,
+  width: 1536,
+  height: 1022
+)
+Photo.create!(
+  title: "Swallowed by Snow",
+  description: "Snowboard goes down the slopes against a blue cliff.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506214003/RY6D5-Imgur-copy_y2sunv.jpg",
+  ownername: u2.username,
+  width: 900,
+  height: 600
+)
+Photo.create!(
+  title: "Lifts",
+  description: "These lifts take 15 minutes to get to the top.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506213987/pexels-photo-566885_m9rs97.jpg",
+  ownername: u2.username,
+  width: 1920,
+  height: 1280
+)
+Photo.create!(
+  title: "Sunset",
+  description: "7:37pm shot againt a blue night sky.",
+  img_url: "http://res.cloudinary.com/sohnbrian/image/upload/v1506213984/pexels-photo-262372_segars.jpg",
+  ownername: u2.username,
+  width: 1280,
+  height: 813
+)
+
+
 
 Album.destroy_all
 a1 = Album.create!(
