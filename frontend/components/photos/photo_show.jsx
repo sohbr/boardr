@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../footer";
 import Modal from "react-modal";
+import CommentIndexContainer from "../comments/comment_index_container";
 
 class PhotoShow extends React.Component {
   constructor(props) {
@@ -124,7 +125,7 @@ class PhotoShow extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="COMMENTS WILL GO HERE">comments</div>
+            <CommentIndexContainer />
           </div>
           <div className="show-bottom-right" />
         </div>
