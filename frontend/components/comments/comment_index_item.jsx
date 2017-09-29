@@ -66,20 +66,22 @@ class CommentIndexItem extends React.Component {
   render() {
     const { currentUser, comment } = this.props;
     let editButton, deleteButton;
+
     if (currentUser) {
       if (currentUser.id === comment.user_id) {
         editButton = (
           <div className="edit-comment" onClick={this.openEditModal}>
-            <i className="fa fa-edit" />
+            <i className="fa fa-edit" aria-hidden="true" />
           </div>
         );
         deleteButton = (
           <div className="delete-comment" onClick={this.handleDelete}>
-            <i className="fa fa-trash" />
+            <i className="fa fa-trash" aria-hidden="true" />
           </div>
         );
       }
     }
+
     return (
       <div className="comment-index-item-container">
         <div className="iic-left-right">

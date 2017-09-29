@@ -4,11 +4,11 @@ export const getTags = photoId =>
     url: `api/photos/${photoId}/tags`
   });
 
-export const postTag = data =>
+export const postTag = tag =>
   $.ajax({
     method: "POST",
     url: "api/tags",
-    data
+    data: { tag }
   });
 
 export const deleteTag = tag =>

@@ -20,9 +20,6 @@
   flex-direction: column;
 }
 
-.delete-photo-button {
-}
-
 .fa.fa-trash-o {
   font-size: 22px;
   color: darkgray;
@@ -66,6 +63,13 @@
 .show-bottom-half {
   display: flex;
   width: 100%;
+}
+
+.show-bottom-right {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
 
 .show-bottom-left {

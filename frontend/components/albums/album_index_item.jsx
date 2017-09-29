@@ -21,7 +21,7 @@ class AlbumIndexItem extends React.Component {
         className="stack"
       >
         <img className="album-item-photo" src={album.photos[0].img_url} />
-        <span> {album.title}</span>
+        <div> {album.title}</div>
       </Link>
     );
   }

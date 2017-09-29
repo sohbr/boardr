@@ -15,6 +15,7 @@ class CommentIndex extends React.Component {
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   update(field) {
     return e => {
       e.preventDefault();
@@ -65,6 +66,7 @@ class CommentIndex extends React.Component {
           <form className="add-comment-form" onSubmit={this.handleSubmit}>
             <textarea
               className="add-comment"
+              value={this.state.body}
               placeholder="...add a comment..."
               onChange={this.update("body")}
             />

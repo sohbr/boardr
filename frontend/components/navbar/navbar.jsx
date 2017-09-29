@@ -4,7 +4,7 @@ import SessionFormContainer from "../session_form/session_form_container";
 
 const loggedInLinks = (currentUser, logout) => (
   <div className="logged-in-links">
-    <div className="header-username">.{currentUser.username}.</div>
+    <div className="header-username">{currentUser.username}</div>
     <img className="header-img" src={currentUser.img_url} />
     <Link
       className="header-upload-button"

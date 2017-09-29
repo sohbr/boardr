@@ -6,6 +6,11 @@
   align-items: center;
   min-height: 900px;
 }
+.album-cover-img,
+.album-item-photo {
+  border: 7px solid white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 .album-title {
   margin-top: 90px;
@@ -18,20 +23,18 @@
 }
 
 .album-index-container {
-  margin: 55px 50px 100px;
+  margin: 15px 20px 40px;
   width: 80%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .stack {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   height: 140px;
   width: 210px;
-  margin: 50px 10px;
+  margin: 50px 40px;
   position: relative;
   background-color: white;
   z-index: 1;
@@ -81,11 +84,8 @@
   content: "";
   position: absolute;
 }
-.stack > span {
-  position: relative;
-  top: 10px;
-  margin: 0 auto;
-  width: 90%;
+.stack > div {
+  margin-top: 30px;
   color: #949494;
   font-size: 0.8em;
   padding: 10px;
