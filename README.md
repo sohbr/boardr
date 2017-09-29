@@ -1,24 +1,29 @@
-# README
+### **Boardr**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Boardr is a snowboard-themed photo-sharing web application, inspired by Flickr. Users can share snowboarding experiences by uploading photos of their adventures.
 
-Things you may want to cover:
+![Mainpage](http://res.cloudinary.com/sohnbrian/image/upload/v1506724495/Screen_Shot_2017-09-29_at_1.31.42_PM_kvuoxs.png)
 
-* Ruby version
+## _Technology:_
+Boardr is built with a Ruby on Rails backend on a PostgresQL database. React is used on the frontend in combination with a Redux architectural framework for unidirectional data flow.
 
-* System dependencies
+![Photostream](http://res.cloudinary.com/sohnbrian/image/upload/v1506724495/Screen_Shot_2017-09-29_at_1.30.11_PM_nujr9e.png)
 
-* Configuration
+## _Features:_
+1. User authentication with BCrypt
+2. Photo uploads and deletion
+3. Album organization
+4. Comments
+5. Tags
 
-* Database creation
+![Albums](http://res.cloudinary.com/sohnbrian/image/upload/v1506724495/Screen_Shot_2017-09-29_at_1.30.34_PM_lzabew.png)
 
-* Database initialization
+React Modals are utilized for user login and form submissions.
+Cloudinary services as cloud storage for picture uploads.
 
-* How to run the test suite
+![Comments/Tags](http://res.cloudinary.com/sohnbrian/image/upload/v1506724494/Screen_Shot_2017-09-29_at_1.31.01_PM_nmnegf.png)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## _Improvements:_
+1. Likes and follows between users.
+2. Search bar with live results for pictures lookup based on tag words, titles and descriptions.
+3. Infinite scroll for Photostream, Explore and search results.
