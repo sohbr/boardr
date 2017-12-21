@@ -28,6 +28,7 @@ Cloudinary services as cloud storage for picture uploads.
 
 ![Comments/Tags](http://res.cloudinary.com/sohnbrian/image/upload/v1506724494/Screen_Shot_2017-09-29_at_1.31.01_PM_nmnegf.png)
 
+
 ## _Improvements:_
 1. Likes and follows between users.
 2. Search bar with live results for pictures lookup based on tag words, titles and descriptions.
