@@ -9,6 +9,7 @@ import {
 import values from "lodash/values";
 import CommentIndex from "./comment_index";
 
+
 const mapStateToProps = state => {
   return {
     currentUser: state.session.currentUser,
