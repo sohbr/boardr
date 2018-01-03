@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
 
+
 import * as sessionActions from "./actions/session_actions";
 import * as PhotosActions from "./actions/photos_actions";
 import * as AlbumsActions from "./actions/albums_actions";
