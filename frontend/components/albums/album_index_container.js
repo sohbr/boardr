@@ -3,6 +3,7 @@ import { getAlbums } from "../../actions/albums_actions";
 import AlbumIndex from "./album_index";
 import values from "lodash/values";
 
+
 const mapStateToProps = state => {
   return {
     current_username: state.session.currentUser.username,
