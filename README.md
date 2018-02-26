@@ -7,6 +7,7 @@ Boardr is a snowboard-themed photo-sharing web application, inspired by Flickr. 
 [Live Demo](http://snow-boardr.herokuapp.com)
 
 
+
 ![Mainpage](http://res.cloudinary.com/sohnbrian/image/upload/v1506724495/Screen_Shot_2017-09-29_at_1.31.42_PM_kvuoxs.png)
 
 ## _Technology:_
